@@ -8,7 +8,7 @@ class EditorData
 	toggles=613;
 	class ItemIDProvider
 	{
-		nextID=69;
+		nextID=71;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={795.17108,37.071426,12146.384};
-		dir[]={-0.87378913,-0.48381472,0.049880628};
-		up[]={-0.48305669,0.8751542,0.027575681};
-		aside[]={0.056994893,6.1435821e-007,0.99840552};
+		pos[]={817.53876,38.578171,12191.834};
+		dir[]={-0.70314693,-0.31270298,-0.63865048};
+		up[]={-0.23150449,0.94983792,-0.21026944};
+		aside[]={-0.67236298,4.4843182e-007,0.74026448};
 	};
 };
 binarizationWanted=0;
@@ -45,13 +45,14 @@ addons[]=
 	"A3_Drones_F_Air_F_Gamma_UAV_01",
 	"ARGO_Cologne2017_ARGO_Vehicles",
 	"ARGO_Halloween2017_ARGO_Offroad_01",
-	"A3_Soft_F_Exp_LSV_02"
+	"A3_Soft_F_Exp_LSV_02",
+	"ARGO_Halloween2017_ARGO_Heli_Light_02"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=17;
+		items=18;
 		class Item0
 		{
 			className="ARGO_Characters_ARGO";
@@ -155,6 +156,11 @@ class AddonsMetaData
 			className="ARGO_Halloween2017_ARGO_Offroad_01";
 			name="ARGO_Halloween2017_ARGO_Offroad_01";
 		};
+		class Item17
+		{
+			className="ARGO_Halloween2017_ARGO_Heli_Light_02";
+			name="ARGO_Halloween2017_ARGO_Heli_Light_02";
+		};
 	};
 };
 randomSeed=89661;
@@ -184,7 +190,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=26;
+		items=27;
 		class Item0
 		{
 			dataType="Group";
@@ -197,7 +203,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={782.875,28.921438,12143.175};
+						position[]={782.375,28.921438,12162.3};
 					};
 					side="West";
 					flags=7;
@@ -703,6 +709,23 @@ class Mission
 			id=62;
 			type="B_G_Offroad_01_armed_F";
 			atlOffset=-1.9073486e-006;
+		};
+		class Item26
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={805.125,31.099648,12196.89};
+				angles[]={0,4.6949358,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this addWeapon ""gatling_20mm_VTOL_01""; this addMagazine ""4000Rnd_20mm_Tracer_Red_shells""";
+			};
+			id=70;
+			type="B_Clouds_Heli_Light_02_unarmed_cloudrider_01_AM";
 		};
 	};
 };

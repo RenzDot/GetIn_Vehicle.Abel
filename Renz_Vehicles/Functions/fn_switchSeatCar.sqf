@@ -6,46 +6,9 @@
 
 params ["_gunner","_body","_newSeatPos"];
 
-//Obtain all seat positions
-/*_allPositions = fullCrew [_body, "", true];//[[player, seatType, cargoIndex, turretIndex, isFFV], ...]
-
-//Replace cargo with turret seat
-_gunnerSeatPosition = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "turretSeatPosition",0] call BIS_fnc_returnConfigEntry;
-{
-	if ((_x select 2) == _gunnerSeatPosition) exitWith {
-		_allPositions set [_forEachIndex, (fullCrew [_gunner, "gunner", true]) select 0];
-	};
-} forEach _allPositions;
-
-//Get current seat pos 
-_currentPos = -1;
-{
-	if ((_x select 0) == player) exitWith {
-		_currentPos = _forEachIndex;
-	};
-} forEach _allPositions;
-
-//Get new seat positon
-_newSeatPos = [];
-_posCount = count _allPositions;
-for "_i" from 0 to (_posCount - 1) do {
-	_posIndex = [	
-		(_currentPos + (_posCount - _i)) % (_posCount), 
-		(_currentPos + _i) % (_posCount)
-	] select _goRight;
-
-	_seat = (_allPositions select (_posIndex max 0));
-	_unit = (_seat select 0);
-	if (!alive _unit) exitWith {
-		deleteVehicle _unit;
-		_newSeatPos = _seat;
-	};
-};*/
-
 if (count _newSeatPos == 0) exitWith {
 	["","All seats taken"] call Renz_fnc_showSeat;
 };
-
 
 //Workaround since moveInTurret/moveInGunner is broken for gunner
 _newSeatType = toLower (_newSeatPos select 1);
@@ -53,7 +16,6 @@ if (_newSeatType in ["gunner","driver"]) then {
 
 	//Another workaround to make moveInAny work for car gunners
 	_bouncer = objNull;
-	
 	if (_newSeatType == "gunner") then {
 		_hasEmptyCommander = count ((fullCrew [_gunner, "commander",true]) - (fullCrew [_gunner, "commander"])) == 1;
 
@@ -67,7 +29,7 @@ if (_newSeatType in ["gunner","driver"]) then {
 	//switch period for driver/gunner
 	[_gunner, _body, _bouncer, _newSeatType] spawn {
 		params ["_gunner","_body","_bouncer","_newSeatType"];
-		_getInGunnerDriver = [
+		_getInDriverOrGunner = [
 			{player moveInDriver _body}, 
 			{player moveInAny _gunner}
 		] select (_newSeatType == "gunner");
@@ -75,7 +37,7 @@ if (_newSeatType in ["gunner","driver"]) then {
 		moveOut player;
 		_endTime = diag_tickTime + 0.5;
 		waitUntil {
-			if (isNull objectParent player) then _getInGunnerDriver;
+			if (isNull objectParent player) then _getInDriverOrGunner;
 			diag_tickTime > _endTime;
 		};
 
@@ -96,7 +58,7 @@ if (_newSeatType in ["gunner","driver"]) then {
 		_currentPos = assignedVehicleRole player;
 		_isInGunner = ((_currentPos select 0) == "Turret") && {(_currentPos select 1) isEqualTo [0]};
 	
-		//Workaround since some action commands don't work when inside the gunner position
+		//Workaround since some action commands don't work when inside gunner or driver positions
 		_getInCargo = {};
 		_newSeatType = (_newSeatPos select 1);
 		if (_isInGunner) then {
