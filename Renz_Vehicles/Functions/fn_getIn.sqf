@@ -61,7 +61,8 @@ if (_seatType == "gunner") then {
 			};
 			diag_tickTime > _endTime;
 		};
-
+		_animation = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _turret), "turretAnimation",""] call BIS_fnc_returnConfigEntry;
+		[player, _animation] call Renz_fnc_switchMoveGlobal;
 		deleteVehicle _bouncer;
 	};
 } else {

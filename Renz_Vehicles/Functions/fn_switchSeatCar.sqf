@@ -29,7 +29,7 @@ _currentPos = -1;
 //Get new seat positon
 _newSeatPos = [];
 _posCount = count _allPositions;
-for "_i" from 0 to _posCount do {
+for "_i" from 0 to (_posCount - 1) do {
 	_posIndex = [	
 		(_currentPos + (_posCount - _i)) % (_posCount), 
 		(_currentPos + _i) % (_posCount)
@@ -50,28 +50,34 @@ if (count _newSeatPos == 0) exitWith {
 
 
 //Workaround since moveInTurret/moveInGunner is broken for gunner
-_seatType = toLower (_newSeatPos select 1);
-if (_seatType == "gunner") then {	
+_newSeatType = toLower (_newSeatPos select 1);
+if (_newSeatType in ["gunner","driver"]) then {	
 
 	//Another workaround to make moveInAny work for car gunners
 	_bouncer = objNull;
-	_hasEmptyCommander = count ((fullCrew [_turret, "commander",true]) - (fullCrew [_turret, "commander"])) == 1;
-	if (_hasEmptyCommander) then {
-		_bouncer = createAgent [typeOf player , [0,0,0],[],0,"NONE"];
-		_bouncer moveInAny _turret;
-		systemChat "bouncer bounced";
+	
+	if (_newSeatType == "gunner") then {
+		_hasEmptyCommander = count ((fullCrew [_turret, "commander",true]) - (fullCrew [_turret, "commander"])) == 1;
+
+		if (_hasEmptyCommander) then {
+			_bouncer = createAgent [typeOf player , [0,0,0],[],0,"NONE"];
+			_bouncer moveInAny _turret;
+			systemChat "Bouncer bounced";
+		};
 	};
 
-	//switch period 
-	[_turret, _bouncer] spawn {
-		params ["_turret","_bouncer"];
+	//switch period for driver/gunner
+	[_turret, _body, _bouncer, _newSeatType] spawn {
+		params ["_turret","_body","_bouncer","_newSeatType"];
+		_getInGunnerDriver = [
+			{player moveInDriver _body}, 
+			{player moveInAny _turret}
+		] select (_newSeatType == "gunner");
 
-		player action ["eject",vehicle player];
+		moveOut player;
 		_endTime = diag_tickTime + 0.5;
 		waitUntil {
-			if (isNull objectParent player) then {
-				player moveInAny _turret;	
-			};
+			if (isNull objectParent player) then _getInGunnerDriver;
 			diag_tickTime > _endTime;
 		};
 
@@ -80,67 +86,43 @@ if (_seatType == "gunner") then {
 
 } else {
 	
-	//Move in driver, cargo or Fire From Vehicle seat
-	0 = switch (_seatType) do {
-		case "driver" : {player action ["moveInDriver", _body]};
-		case "cargo" : {player action ["moveInCargo", _body, (_newSeatPos select 2)]};
-		case "turret" : {player action ["moveInTurret", _body, (_newSeatPos select 3)]};
-	};
-};
-/*
-//Fix for switching to gunner when commander empty
-_bouncer = objNull;
-_seatType = toLower (_newSeatPos select 1);
-_hasEmptyCommander = count ((fullCrew [_turret, "commander",true]) - (fullCrew [_turret, "commander"])) == 1;
-systemChat ("Started at : " + str time);
-if (_hasEmptyCommander && _seatType == "gunner" ) then {
-	_bouncer = createAgent [typeOf player,[0,0,0],[],0,"NONE"];
-	_bouncer moveInAny _turret;
-	systemChat str "Bouncer bounced";
-};
-
-
-//Workaround since moveToXXX is somewhat broken
-player action ["eject", vehicle player];
-player setPosATL (player getRelPos [6, getDir player - 90]);//Ensures player is not run over
-[_body, _turret,_newSeatPos, _bouncer,_currentPos] spawn {
-	params ["_body","_turret","_newSeatPos","_bouncer","_currentPos"];
-	_doGetIn = switch (toLower (_newSeatPos select 1)) do {
-		case "driver": { {player moveInDriver _body} };
-		case "gunner": { {player moveInAny _turret} };
-		case "turret": { {
-				if (_currentPos == -1) then {
-					
-				} else {
-					player moveInCargo [_body, (_newSeatPos select 2)]} 
-				}
-				
-
-			};
-		case "cargo": { {player moveInCargo [_body, (_newSeatPos select 2)]} };
-	};
-
-	//Switch period
-	_endTime = time + 0.5;
-	waitUntil {
-		if ( vehicle player == player) then _doGetIn;
-		time > _endTime; 
-	};
-
-	deleteVehicle _bouncer;
+	//Move in cargo or Fire From Vehicle seat
+	_isInGunner = (toLower ((_allPositions select _currentPos) select 1) == "gunner");
 	
-	//Fix broken animation for turret seat
-	if (	vehicle player != player && 
-			(assignedVehicleRole player select 0) == "Turret" &&
-			{(assignedVehicleRole player select 1) isEqualTo [0]}
-	) then {
-		_turretAnim = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _turret), "turretAnimation", ""] call BIS_fnc_returnConfigEntry;
-		if (_turretAnim != "") then {
-			[player, _turretAnim] call Renz_fnc_switchMoveGlobal;
+	[_body,_newSeatPos,_isInGunner] spawn {
+		params ["_body","_newSeatPos","_isInGunner"];
+
+		_getInCargo = {};
+		_newSeatType = (_newSeatPos select 1);
+
+		//Workaround since some action commands don't work when inside the gunner position
+		if (_isInGunner) then {
+			_getInCargo = [
+				{player moveInCargo [_body, (_newSeatPos select 2)]}, 
+				{player moveInTurret [_body, (_newSeatPos select 3)]}
+			] select (_newSeatType == "turret");
+
+		} else {
+			_getInCargo = [
+				{player action ["moveToCargo", _body, (_newSeatPos select 2)]}, 
+				{player action ["moveToTurret", _body, (_newSeatPos select 3)]}
+			] select (_newSeatType == "turret");
 		};
-	};
-	systemChat ("switch period ended at " + str time);
-};*/
+
+		//switch period for cargo seats
+		if (!_isInGunner) then _getInCargo else {
+			moveOut player;
+			_endTime = diag_tickTime + 0.5;
+			waitUntil {
+				if (isNull objectParent player) then _getInCargo;
+				diag_tickTime > _endTime;
+			};
+
+		};
+
+
+	};	
+};
 
 [	(_newSeatPos select 1), 
 	["", str (_newSeatPos select 2)] select ((_newSeatPos select 2) != -1)
