@@ -5,20 +5,21 @@
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 params ["_vehicle","_goRight"];
-(_vehicle call Renz_fnc_getTurretBody) params ["_turret","_body"];
+(_vehicle call Renz_fnc_getTurretBody) params ["_gunner","_body"];
+if (_gunner == _body) exitWith {};
 
-if (_turret == _body) exitWith {};
+_newSeatPos = [_gunner,_body,_goRight] call Renz_fnc_getNewSeat;
 
-_switchFnc = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _turret), "seatFunction", ""] call BIS_fnc_returnConfigEntry;
+_switchFnc = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "seatFunction", ""] call BIS_fnc_returnConfigEntry;
 if (_switchFnc == "tank") exitWith {
-	[_vehicle,_goRight] call Renz_fnc_switchSeatTank;
+	[_gunner, _body, _newSeatPos] call Renz_fnc_switchSeatTank;
 };
 
 if (_switchFnc == "car") exitWith {
-	[_vehicle,_goRight] call Renz_fnc_switchSeatCar;
+	[_gunner, _body, _newSeatPos] call Renz_fnc_switchSeatCar;
 };
 
 if (_switchFnc == "air") exitWith {
-	[_vehicle,_goRight] call Renz_fnc_switchSeatAir;
+	[_gunner, _body, _newSeatPos] call Renz_fnc_switchSeatAir;
 }
 

@@ -4,7 +4,23 @@
 // 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
-params ["_goRight"];
+params ["_vehicle","_goRight"];
+(_vehicle call Renz_fnc_getTurretBody) params ["_turret","_body"];
+
+//Obtain all seat positions
+_allPositions = fullCrew [_body,"",true];
+
+//Replace cargo with turret seat
+_turretSeatPosition = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _turret), "turretSeatPosition",0] call BIS_fnc_returnConfigEntry;
+{
+	if ((_x select 2) == _turretSeatPosition) exitWith {
+		_allPositions set [_forEachIndex, (fullCrew [_turret, "gunner", true]) select 0];
+	};
+} forEach _allPositions;
+
+
+
+/*
 Renz_forcedSeat = assignedVehicleRole player;
 _turret = (vehicle player) getVariable ["Renz_turret", (vehicle player)];
 _body = (vehicle player) getVariable ["Renz_body", (vehicle player)];
@@ -106,5 +122,5 @@ for "_i" from 1 to count _vehiclePositions do {
 		
 	};
 	
-};
+};*/
 

@@ -27,6 +27,7 @@ systemchat "Client init done";
 /*
 MP tests
 
+>> General
 vehInit 
 - Correct textures on creation - true
 - Correct textures after JIP - true
@@ -35,36 +36,43 @@ Camera
 - Third person on driver - true
 - First person on gunner & commander - true
 
-addAction 
-- addAction moves caller into vehicle - true
-- addAction appears for remote vehicle on creation - true
-- addAction appears for remote vehicle after JIP - 
-- addAction does not appear for dead vehicle
-- addAction does not appear for enemy callers
 
 keybinds 
 - player ejected from vehicle on keypress - true
-- engine switched off on eject 
-
-switchSeats 
-- Player can get in vehicle - true
-- Player switches seats to driver, gunner and passenger - true
-- Player does not switch when in a full vehicle
-- Player only switches to empty seats - player cannot switch to empty seat
-- Player does not die while switching at high speeds
-- EachFrame event removed properly
-- Player displays correct turret animation for other players - animation only displays locally
-- Player displays correct turret animation after for JIP players
-
-Show icons 
-- Seat icons appear correctly 
-- Seat icon for full seats appear
+- engine switched off on eject - true
 
 Finalisation 
 - Remove debug chat 
 - Disable allowFunctionsRecompile
 - Change execVM to call
 - compileFinal all inline functions
+
+>> Cars
+
+addAction 
+- addAction moves caller into vehicle - true
+- addAction appears for remote vehicle on creation - true
+- addAction appears for remote vehicle after JIP - true
+- addAction does not appear for dead vehicle
+- addAction does not appear for enemy callers
+
+switchSeats 
+- Player can get in vehicle - true
+- Player switches seats to driver, gunner and passenger - true
+- Player does not switch when in a full vehicle
+- Player only switches to empty seats - true
+- Player does not die while switching at high speeds
+- EachFrame event removed properly
+- Player displays correct turret animation for other players - true
+- Player displays correct turret animation after for JIP players - false
+
+
+Show icons 
+- Seat icons appear correctly - true 
+- Seat icon for full seats appear - true
+
+
+>> Tanks
 
 
 */

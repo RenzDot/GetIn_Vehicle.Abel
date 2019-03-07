@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={745.45465,39.548019,12151.033};
-		dir[]={0.90746397,-0.39645794,0.13919432};
-		up[]={0.39189884,0.91804314,0.060111988};
-		aside[]={0.15161668,6.3632615e-007,-0.98845941};
+		pos[]={795.17108,37.071426,12146.384};
+		dir[]={-0.87378913,-0.48381472,0.049880628};
+		up[]={-0.48305669,0.8751542,0.027575681};
+		aside[]={0.056994893,6.1435821e-007,0.99840552};
 	};
 };
 binarizationWanted=0;
@@ -161,6 +161,7 @@ randomSeed=89661;
 class ScenarioData
 {
 	author="[D.A.M] Renz";
+	wreckRemovalMaxTime=3600;
 };
 class Mission
 {
@@ -196,7 +197,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={782.75,28.921438,12153.55};
+						position[]={782.875,28.921438,12143.175};
 					};
 					side="West";
 					flags=7;
@@ -233,7 +234,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={781.5,28.921438,12146.175};
+						position[]={781.875,28.921438,12146.8};
+						angles[]={0,4.6774826,0};
 					};
 					side="West";
 					flags=7;
@@ -370,7 +372,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={781.5,31.678244,12146.123};
+				position[]={781.875,31.678244,12146.748};
 				angles[]={0,4.6774826,0};
 			};
 			side="West";

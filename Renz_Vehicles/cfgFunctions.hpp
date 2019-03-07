@@ -22,6 +22,7 @@ class CfgFunctions {
 			fnc(addVehActionJIP);
 			fnc(getTurretBody);
 			fnc(getIn);
+			fnc(getNewSeat);
 		}
 	}
 }
