@@ -38,20 +38,6 @@ _body setPosATL _pos;
 {_turret addWeapon _x} forEach _weapons;
 {_turret addMagazine _x} forEach _magazines; 
 
-//Wheel damage resistance for tracked vehicles
-if (_isTracked == 1) then {
-	_body addEventHandler ["HitPart",{
-		(_this select 0) params ["_body", "","","","","_selection"];
-		_hitPart = (_selection select 0);
-		systemChat str _hitPart;
-		_wheels = ["wheel_2_1_hide","wheel_2_2_hide","wheel_2_3_hide","wheel_1_1_hide","wheel_1_2_hide","wheel_1_3_hide"];
-		if (_hitPart in _wheels) then {
-			_body setHit [_hitPart, 0];
-			systemChat (_hitPart + " hit");
-		};
-	}];
-};
-
 if (_turretID > -1) then {
 	_turret setObjectTextureGlobal [_turretID, (_bodyTextures select 0)];
 };
