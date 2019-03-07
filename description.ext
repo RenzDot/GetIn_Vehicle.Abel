@@ -1,0 +1,18 @@
+// SETTINGS
+disabledAI = true;
+
+// RESPAWN
+Respawn = 3;
+RespawnDelay = 5;
+respawnOnStart = 0;
+respawnDialog = 1;
+respawnTemplates[] = { "Spectator", "Tickets", "EndMission", "MenuInventory" };
+
+// CORPSE MANAGER
+corpseManagerMode = 1;
+corpseRemovalMaxTime = 300;
+
+allowFunctionsRecompile = 1;//Remove on finalisation
+
+#include "Renz_Vehicles\cfgSetup.hpp"
+#include "KKSB\KKSB.ext"

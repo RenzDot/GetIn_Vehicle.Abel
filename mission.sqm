@@ -1,0 +1,706 @@
+version=53;
+class EditorData
+{
+	moveGridStep=0.125;
+	angleGridStep=0.017453292;
+	scaleGridStep=0.1;
+	autoGroupingDist=10;
+	toggles=613;
+	class ItemIDProvider
+	{
+		nextID=69;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
+	};
+	class Camera
+	{
+		pos[]={745.45465,39.548019,12151.033};
+		dir[]={0.90746397,-0.39645794,0.13919432};
+		up[]={0.39189884,0.91804314,0.060111988};
+		aside[]={0.15161668,6.3632615e-007,-0.98845941};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"ARGO_Characters_ARGO",
+	"A3_Ui_F",
+	"ARGO_UI_ARGO",
+	"A3_Misc_F_Helpers",
+	"ARGO_SupportersPack_ARGO_Vehicles",
+	"A3_Armor_F_Beta_APC_Wheeled_01",
+	"ARGO_Data_ARGO_Overrides_Scope",
+	"ARGO_Data_ARGO_Overrides_ScopeCurator",
+	"ARGO_Data_ARGO_Overrides_Simulation",
+	"A3_Armor_F_Beta_APC_Tracked_02",
+	"A3_Soft_F_MRAP_01",
+	"A3_Soft_F_Beta_MRAP_03",
+	"A3_Armor_F_Gamma_APC_Wheeled_03",
+	"A3_Armor_F_EPB_APC_Tracked_03",
+	"A3_Armor_F_Beta_APC_Tracked_01",
+	"A3_Soft_F_Offroad_01",
+	"A3_Soft_F_Exp_LSV_01",
+	"A3_Drones_F_Air_F_Gamma_UAV_01",
+	"ARGO_Cologne2017_ARGO_Vehicles",
+	"ARGO_Halloween2017_ARGO_Offroad_01",
+	"A3_Soft_F_Exp_LSV_02"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=17;
+		class Item0
+		{
+			className="ARGO_Characters_ARGO";
+			name="ARGO_Characters_ARGO";
+		};
+		class Item1
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="ARGO_UI_ARGO";
+			name="ARGO_UI_ARGO";
+		};
+		class Item3
+		{
+			className="A3_Misc_F";
+			name="Arma 3 - 3D Aids and Helpers";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="ARGO_SupportersPack_ARGO_Vehicles";
+			name="ARGO_SupportersPack_ARGO_Vehicles";
+		};
+		class Item5
+		{
+			className="A3_Armor_F_Beta";
+			name="Arma 3 Beta - Armored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="ARGO_Data_ARGO_Overrides_Scope";
+			name="ARGO_Data_ARGO_Overrides_Scope";
+		};
+		class Item7
+		{
+			className="ARGO_Data_ARGO_Overrides_ScopeCurator";
+			name="ARGO_Data_ARGO_Overrides_ScopeCurator";
+		};
+		class Item8
+		{
+			className="ARGO_Data_ARGO_Overrides_Simulation";
+			name="ARGO_Data_ARGO_Overrides_Simulation";
+		};
+		class Item9
+		{
+			className="A3_Soft_F";
+			name="Arma 3 Alpha - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item10
+		{
+			className="A3_Soft_F_Beta";
+			name="Arma 3 Beta - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item11
+		{
+			className="A3_Armor_F_Gamma";
+			name="Arma 3 - Armored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item12
+		{
+			className="A3_Armor_F_EPB";
+			name="Arma 3 Adapt Episode - Armored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item13
+		{
+			className="A3_Soft_F_Exp";
+			name="Arma 3 Apex - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item14
+		{
+			className="A3_Drones_F";
+			name="Arma 3 Beta - Drones";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item15
+		{
+			className="ARGO_Cologne2017_ARGO_Vehicles";
+			name="ARGO_Cologne2017_ARGO_Vehicles";
+		};
+		class Item16
+		{
+			className="ARGO_Halloween2017_ARGO_Offroad_01";
+			name="ARGO_Halloween2017_ARGO_Offroad_01";
+		};
+	};
+};
+randomSeed=89661;
+class ScenarioData
+{
+	author="[D.A.M] Renz";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		minute=55;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=26;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={782.75,28.921438,12153.55};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=7;
+					type="CL_Rifleman_AM";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=6;
+		};
+		class Item1
+		{
+			dataType="Marker";
+			position[]={696.125,28.92,12195};
+			name="marker_0";
+			type="mil_dot";
+			id=10;
+		};
+		class Item2
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={781.5,28.921438,12146.175};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						name="bob";
+						isPlayable=1;
+					};
+					id=12;
+					type="CL_Machinegunner_AM";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=12;
+						item1=23;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=11;
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={807.375,29.680233,12161.125};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="arrow";
+			};
+			id=13;
+			type="Sign_Arrow_Large_Yellow_F";
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={803.875,31.486843,12186.125};
+				angles[]={0,4.7472959,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="tank0";
+			};
+			id=15;
+			type="B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F";
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={781.375,31.382696,12167.125};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret1";
+			};
+			id=16;
+			type="B_APC_Wheeled_01_cannon_F";
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={763.75,31.312786,12167.875};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret6";
+			};
+			id=18;
+			type="O_APC_Tracked_02_cannon_F";
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={781.5,31.678244,12146.123};
+				angles[]={0,4.6774826,0};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret3";
+			};
+			id=23;
+			type="B_MRAP_01_hmg_F";
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={782.875,31.36981,12134.248};
+				angles[]={0,4.6774826,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret4";
+			};
+			id=24;
+			type="I_MRAP_03_hmg_F";
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={780.75,31.678221,12156.998};
+				angles[]={0,4.6774826,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret2";
+			};
+			id=27;
+			type="B_MRAP_01_gmg_F";
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={782.875,31.369669,12121.998};
+				angles[]={0,4.6774821,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret5";
+			};
+			id=28;
+			type="I_MRAP_03_gmg_F";
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={763.5,31.534288,12156.125};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret7";
+			};
+			id=29;
+			type="I_APC_Wheeled_03_cannon_F";
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={764,31.409023,12146};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret8";
+			};
+			id=31;
+			type="I_APC_tracked_03_cannon_F";
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={762.375,31.551636,12134.5};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret9";
+			};
+			id=33;
+			type="O_APC_Tracked_02_AA_F";
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={762.375,31.725361,12122.5};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret10";
+			};
+			id=35;
+			type="B_APC_Tracked_01_AA_F";
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={750.75,31.084408,12144.291};
+				angles[]={0,4.7472959,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret13";
+			};
+			id=36;
+			type="B_G_Offroad_01_armed_F";
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={750.875,31.096151,12166.001};
+				angles[]={0,4.7298422,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret11";
+			};
+			id=38;
+			type="B_LSV_01_armed_F";
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={750.375,31.084408,12133.916};
+				angles[]={0,4.7472959,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret14";
+			};
+			id=44;
+			type="O_G_Offroad_01_armed_F";
+		};
+		class Item18
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={738.99976,29.070469,12165.75};
+				angles[]={0,4.7472959,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="turret17";
+			};
+			id=47;
+			type="O_UAV_01_F";
+		};
+		class Item19
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={807.25,30.761919,12169.375};
+				angles[]={0,4.6949358,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="car1";
+			};
+			id=49;
+			type="B_Clouds_MRAP_03_blufor_F";
+		};
+		class Item20
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={807.375,30.541504,12173.78};
+				angles[]={0,4.6076694,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="car2";
+			};
+			id=50;
+			type="O_Flames_Offroad_01_halloween_witch_01_AM";
+		};
+		class Item21
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={806,31.135946,12177.498};
+				angles[]={0,4.6425762,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="car3";
+			};
+			id=51;
+			type="O_Flames_MRAP_01_flames_01_F";
+		};
+		class Item22
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={806.25,30.541504,12181.905};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="car4";
+			};
+			id=52;
+			type="O_Flames_Offroad_01_flames_01_F";
+		};
+		class Item23
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={807.12299,31.106152,12165.626};
+				angles[]={0,4.7996559,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="car0";
+			};
+			id=53;
+			type="O_Flames_LSV_01_unarmed_flames_01_F";
+		};
+		class Item24
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={749.875,30.64982,12157};
+				angles[]={0,4.7472959,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = this call Renz_fnc_vehicleInit";
+				name="turret12";
+			};
+			id=45;
+			type="O_LSV_02_armed_F";
+		};
+		class Item25
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={795.87531,31.091108,12123.541};
+				angles[]={0,4.7472954,0.00069813168};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this addAction [""Convert"", {(_this select 0) call Renz_fnc_vehicleInit}, [], 1, true, true];";
+				name="dummy";
+			};
+			id=62;
+			type="B_G_Offroad_01_armed_F";
+			atlOffset=-1.9073486e-006;
+		};
+	};
+};
