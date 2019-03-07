@@ -116,8 +116,9 @@ class CfgRenzVehicles
 			turretSelections[] = {};
 			attachPos[] = {0.3,-0.5,0.6}; 
 			weapons[] = {"autocannon_35mm","missiles_titan_AA"};
-			magazines[] = {"4Rnd_Titan_long_missiles","4Rnd_Titan_long_missiles","680Rnd_35mm_AA_shells_Tracer_Red"};
+			magazines[] = {"4Rnd_Titan_long_missiles","4Rnd_Titan_long_missiles","680Rnd_35mm_AA_shells_Tracer_Red","680Rnd_35mm_AA_shells_Tracer_Red"};
 			seatFunction = "tank";
+			isTracked = 1;
 		}
 		
 		class O_APC_Tracked_02_AA_F
@@ -127,8 +128,9 @@ class CfgRenzVehicles
 			turretSelections[] = {};
 			attachPos[] = {0.34,0.2,0.4}; 
 			weapons[] = {};
-			magazines[] = {};
+			magazines[] = {"680Rnd_35mm_AA_shells_Tracer_Green"};
 			seatFunction = "tank";
+			isTracked = 1;
 		}
 
 		class I_APC_tracked_03_cannon_F
@@ -140,6 +142,7 @@ class CfgRenzVehicles
 			weapons[] = {"autocannon_30mm","LMG_coax"};
 			magazines[] = {"140Rnd_30mm_MP_shells_Tracer_Yellow","140Rnd_30mm_MP_shells_Tracer_Yellow","60Rnd_30mm_APFSDS_shells_Tracer_Yellow","60Rnd_30mm_APFSDS_shells_Tracer_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow"};
 			seatFunction = "tank";
+			isTracked = 1;
 		}
 		
 		class I_APC_Wheeled_03_cannon_F
@@ -151,7 +154,7 @@ class CfgRenzVehicles
 			turretID = 2;
 			attachPos[] = {-0.2,-0.7,0.2}; 
 			weapons[] = {};
-			magazines[] = {};
+			magazines[] = {"140Rnd_30mm_MP_shells_Tracer_Yellow","60Rnd_30mm_APFSDS_shells_Tracer_Yellow"};
 			seatFunction = "tank";
 		}
 
@@ -164,7 +167,7 @@ class CfgRenzVehicles
 			turretSelections[] = {0,1};
 			attachPos[] = {0.34,-1.1,0}; 
 			weapons[] = {};
-			magazines[] = {};
+			magazines[] = {"60Rnd_40mm_GPR_Tracer_Red_shells", "40Rnd_40mm_APFSDS_Tracer_Red_shells"};
 			seatFunction = "tank";
 		};
 	
@@ -175,8 +178,9 @@ class CfgRenzVehicles
 			turretSelections[] = {};
 			attachPos[] = {0.34,0.1,0.2}; 
 			weapons[] = {};
-			magazines[] = {};
+			magazines[] = {"140Rnd_30mm_MP_shells_Tracer_Green","60Rnd_30mm_APFSDS_shells_Tracer_Green"};
 			seatFunction = "tank";
+			isTracked = 1;
 		};
 
 		

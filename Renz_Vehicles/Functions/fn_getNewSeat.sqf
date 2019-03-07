@@ -5,9 +5,9 @@
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 params ["_gunner","_body","_goRight"];
-_allPositions = fullCrew [_body, "", true];//[[player, seatType, cargoIndex, turretIndex, isFFV], ...]
+_allPositions = fullCrew [_body, "", true];//[[player, seatType, cargoIndex, gunnerIndex, isFFV], ...]
 
-//Replace cargo with turret seat
+//Replace cargo 0 with gunner seat
 _gunnerSeatPosition = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "turretSeatPosition",0] call BIS_fnc_returnConfigEntry;
 {
 	if ((_x select 2) == _gunnerSeatPosition) exitWith {
