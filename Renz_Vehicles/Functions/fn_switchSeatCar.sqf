@@ -81,6 +81,10 @@ if (_newSeatType in ["gunner","driver"]) then {
 			diag_tickTime > _endTime;
 		};
 
+		if (!isNull objectParent player && _newSeatType == "gunner") then {
+			_animation =  [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _turret), "turretAnimation",""] call BIS_fnc_returnConfigEntry;
+			[player, _animation] call Renz_fnc_switchMoveGlobal;
+		};
 		deleteVehicle _bouncer;
 	};
 
