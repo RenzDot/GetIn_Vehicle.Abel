@@ -3,8 +3,66 @@ class CfgRenzVehicles
 
 	class Vehicles
 	{
+		class B_Clouds_MRAP_03_blufor_F
+		{
+			seatFunction = "car";
+		}
+		
+		class O_Flames_Offroad_01_flames_01_F 
+		{
+			seatFunction = "car";
+		};
+		
+		class O_Flames_LSV_01_unarmed_flames_01_F 
+		{
+			seatFunction = "car";
+		}
+
+		class O_G_Offroad_01_F 
+		{
+			body = "O_Flames_Offroad_01_flames_01_F";
+			bodyTextures[] = {"a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa","argo\supporterspack_argo\vehicles\data\offroad_01_ext_flames_01_co.paa"};
+			seatFunction = "car";
+		}
+
 		class O_Flames_MRAP_01_flames_01_F 
 		{
+			body = "O_Flames_LSV_01_unarmed_flames_01_F";
+			bodyTextures[] = {"a3\soft_f_bootcamp\offroad_01\data\offroad_01_ext_ig_05_co.paa","a3\soft_f_bootcamp\offroad_01\data\offroad_01_ext_ig_05_co.paa"};
+			seatFunction = "car";
+		}
+
+		class O_LSV_02_unarmed_F 
+		{
+			body = "O_Flames_LSV_01_unarmed_flames_01_F";
+			bodyTextures[] = {"a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa","argo\supporterspack_argo\vehicles\data\nato_lsv_02_flames_01_co.paa","argo\supporterspack_argo\vehicles\data\nato_lsv_03_flames_01_co.paa","argo\supporterspack_argo\vehicles\data\nato_lsv_adds_flames_01_co.paa"};
+			seatFunction = "car";
+		}
+
+		class I_MRAP_03_F 
+		{
+			body = "B_Clouds_MRAP_03_blufor_F";									
+			bodyTextures[] = {"a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa","a3\data_f\vehicles\turret_co.paa"};
+			gunnerTextures[] = {"",""};
+			gunnerAnimation = "";
+			attachPos[] = {0,0,0}; 
+			weapons[] = {};
+			magazines[] = {};
+			seatFunction = "car";
+			hitParts[] = {"glass1", "glass2", "glass3", "glass4", "glass5"};
+		}
+
+		class B_G_Offroad_01_F 
+		{
+			body = "O_Flames_Offroad_01_flames_01_F";
+			bodyTextures[] = {"a3\soft_f_bootcamp\offroad_01\data\offroad_01_ext_ig_10_co.paa","a3\soft_f_bootcamp\offroad_01\data\offroad_01_ext_ig_10_co.paa"};
+			seatFunction = "car";
+		}
+
+		class B_LSV_01_unarmed_F 
+		{
+			body = "O_Flames_LSV_01_unarmed_flames_01_F";
+			bodyTextures[] = {"a3\soft_f_exp\lsv_01\data\nato_lsv_01_sand_co.paa","a3\soft_f_exp\lsv_01\data\nato_lsv_02_sand_co.paa","a3\soft_f_exp\lsv_01\data\nato_lsv_03_sand_co.paa","a3\soft_f_exp\lsv_01\data\nato_lsv_adds_sand_co.paa"};
 			seatFunction = "car";
 		}
 		
@@ -12,8 +70,6 @@ class CfgRenzVehicles
 		{
 			body = "O_Flames_MRAP_01_flames_01_F";
 			bodyTextures[] = {"a3\soft_f\mrap_01\data\mrap_01_base_co.paa","a3\soft_f\mrap_01\data\mrap_01_adds_co.paa",""};
-			gunnerTextures[] = {"","",""};
-			attachPos[] = {0,0,0};
 			seatFunction = "car";
 		}
 

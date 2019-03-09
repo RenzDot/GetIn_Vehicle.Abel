@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={769.34088,36.319084,12131.678};
-		dir[]={0.565238,-0.67888367,0.46883178};
-		up[]={0.5225603,0.73419982,0.43343639};
-		aside[]={0.63847333,-1.1809752e-006,-0.76975417};
+		pos[]={752.57867,50.779922,12166.427};
+		dir[]={0.72286016,-0.69108129,-0.0081375986};
+		up[]={0.69107372,0.72273207,-0.0077773752};
+		aside[]={-0.011253055,-1.0233625e-006,-1.0000249};
 	};
 };
 binarizationWanted=0;
@@ -46,7 +46,6 @@ addons[]=
 	"ARGO_Halloween2017_ARGO_Offroad_01",
 	"A3_Soft_F_Exp_LSV_02",
 	"ARGO_Halloween2017_ARGO_Heli_Light_02",
-	"A3_Armor_F_Gamma_MBT_01",
 	"A3_Structures_F_Heli_Items_Electronics",
 	"A3_Structures_F_Civ_Camping"
 };
@@ -367,7 +366,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={804.875,31.688244,12161.998};
-				angles[]={-0,4.6774826,0};
+				angles[]={0,4.6774826,0};
 			};
 			side="Empty";
 			flags=4;
@@ -385,7 +384,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={805.375,31.37981,12151.123};
-				angles[]={-0,4.6774826,0};
+				angles[]={0,4.6774826,0};
 			};
 			side="Empty";
 			flags=4;
@@ -403,7 +402,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={805.625,31.688221,12173.373};
-				angles[]={-0,4.6774826,0};
+				angles[]={0,4.6774826,0};
 			};
 			side="Empty";
 			flags=4;
@@ -421,7 +420,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={805.375,31.379669,12139.373};
-				angles[]={-0,4.6774821,0};
+				angles[]={0,4.6774821,0};
 			};
 			side="Empty";
 			flags=4;
@@ -566,7 +565,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={774.125,31.125946,12140.623};
-				angles[]={-0,4.7472959,0};
+				angles[]={0,4.7472959,0};
 			};
 			side="Empty";
 			flags=4;
@@ -732,7 +731,7 @@ class Mission
 				name="turret16";
 			};
 			id=71;
-			type="B_T_LSV_01_unarmed_CTRG_F";
+			type="B_LSV_01_unarmed_F";
 		};
 		class Item28
 		{
@@ -740,7 +739,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={763.125,30.531502,12174.155};
-				angles[]={0,4.7472959,0};
+				angles[]={-0,4.7472959,0};
 			};
 			side="Empty";
 			flags=4;
@@ -757,8 +756,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={764.125,30.531502,12162.155};
-				angles[]={0,4.7472959,0};
+				position[]={764.125,30.751917,12162.123};
+				angles[]={-0,4.7472959,0};
 			};
 			side="Empty";
 			flags=4;
@@ -768,15 +767,15 @@ class Mission
 				name="turret18";
 			};
 			id=73;
-			type="B_G_Offroad_01_repair_F";
+			type="I_MRAP_03_F";
 		};
 		class Item30
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={763.375,31.416307,12151.75};
-				angles[]={0,4.7472959,0};
+				position[]={763.375,30.64982,12151.75};
+				angles[]={-0,4.7472959,0};
 			};
 			side="Empty";
 			flags=4;
@@ -786,14 +785,14 @@ class Mission
 				name="turret19";
 			};
 			id=74;
-			type="B_MBT_01_cannon_F";
+			type="O_LSV_02_unarmed_F";
 		};
 		class Item31
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={761.625,31.372719,12141.25};
+				position[]={761.625,30.531502,12141.28};
 				angles[]={-0,4.7472959,0};
 			};
 			side="Empty";
@@ -804,7 +803,7 @@ class Mission
 				name="turret20";
 			};
 			id=75;
-			type="B_APC_Tracked_01_rcws_F";
+			type="O_G_Offroad_01_F";
 		};
 		class Item32
 		{
