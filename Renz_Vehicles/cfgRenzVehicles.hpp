@@ -3,13 +3,21 @@ class CfgRenzVehicles
 
 	class Vehicles
 	{
-		
+		class B_MRAP_01_F
+		{
+			body = "O_Flames_MRAP_01_flames_01_F";
+			bodyTextures[] = {"a3\soft_f\mrap_01\data\mrap_01_base_co.paa","a3\soft_f\mrap_01\data\mrap_01_adds_co.paa",""};
+			turretTextures[] = {"","",""};
+			attachPos[] = {0,0,0};
+			seatFunction = "car";
+		}
+
 		
 		class O_G_Offroad_01_armed_F
 		{
 			body = "O_Flames_Offroad_01_flames_01_F";
 			bodyTextures[] = {"a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa","argo\supporterspack_argo\vehicles\data\offroad_01_ext_flames_01_co.paa"};
-			turretSelections[] = {0,1};
+			turretTextures[] = {"",""};
 			turretSeatPosition = 4;
 			turretAnimation = "InBaseMoves_sitHighUp1";
 			attachPos[] = {0,-0.15,0.55}; 
@@ -22,7 +30,7 @@ class CfgRenzVehicles
 		{
 			body = "O_Flames_Offroad_01_flames_01_F";
 			bodyTextures[] = {"a3\soft_f_bootcamp\offroad_01\data\offroad_01_ext_ig_10_co.paa","a3\soft_f_bootcamp\offroad_01\data\offroad_01_ext_ig_10_co.paa"};
-			turretSelections[] = {0,1};
+			turretTextures[] = {"",""};
 			turretSeatPosition = 4;
 			turretAnimation = "InBaseMoves_sitHighUp1";
 			attachPos[] = {0,-0.15,0.55}; 
@@ -35,7 +43,7 @@ class CfgRenzVehicles
 		{
 			body = "O_Flames_LSV_01_unarmed_flames_01_F";
 			bodyTextures[] = {"a3\soft_f_exp\lsv_01\data\nato_lsv_01_sand_co.paa","argo\supporterspack_argo\vehicles\data\nato_lsv_02_flames_01_co.paa","argo\supporterspack_argo\vehicles\data\nato_lsv_03_flames_01_co.paa","argo\supporterspack_argo\vehicles\data\nato_lsv_adds_flames_01_co.paa"};
-			turretSelections[] = {0,1,2,3};
+			turretTextures[] = {"","","",""};
 			turretAnimation = "HubSittingChairA_move1";
 			attachPos[] = {0,0,0}; 
 			weapons[] = {"HMG_127_LSV_01"};
@@ -47,7 +55,7 @@ class CfgRenzVehicles
 		{
 			body = "O_Flames_LSV_01_unarmed_flames_01_F";
 			bodyTextures[] = {"a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa","argo\supporterspack_argo\vehicles\data\nato_lsv_02_flames_01_co.paa","argo\supporterspack_argo\vehicles\data\nato_lsv_03_flames_01_co.paa","argo\supporterspack_argo\vehicles\data\nato_lsv_adds_flames_01_co.paa"};
-			turretSelections[] = {0,1,2};
+			turretTextures[] = {"","",""};
 			turretAnimation = "HubSittingChairA_move1";
 			attachPos[] = {0.2,0.45,-0.5}; 
 			weapons[] = {"LMG_Minigun_Transport"};
@@ -59,7 +67,7 @@ class CfgRenzVehicles
 		{
 			body = "O_Flames_MRAP_01_flames_01_F";									
 			bodyTextures[] = {"a3\soft_f\mrap_01\data\mrap_01_base_co.paa","a3\soft_f\mrap_01\data\mrap_01_adds_co.paa","a3\data_f\vehicles\turret_co.paa"};
-			turretSelections[] = {0,1};
+			turretTextures[] = {"","","a3\data_f\vehicles\turret_co.paa"};
 			turretAnimation = "passenger_generic01_foldhands";
 			turretSeatPosition = 2;
 			attachPos[] = {0,0,0.55}; 
@@ -72,7 +80,7 @@ class CfgRenzVehicles
 		{
 			body = "O_Flames_MRAP_01_flames_01_F";									
 			bodyTextures[] = {"a3\soft_f\mrap_01\data\mrap_01_base_co.paa","a3\soft_f\mrap_01\data\mrap_01_adds_co.paa","a3\data_f\vehicles\turret_co.paa"};
-			turretSelections[] = {0,1};
+			turretTextures[] = {"","","a3\data_f\vehicles\turret_co.paa"};
 			turretAnimation = "passenger_generic01_foldhands";
 			turretSeatPosition = 2;
 			attachPos[] = {0,0,0.55}; 
@@ -85,7 +93,7 @@ class CfgRenzVehicles
 		{
 			body = "B_Clouds_MRAP_03_blufor_F";									
 			bodyTextures[] = {"a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa","a3\data_f\vehicles\turret_co.paa"};
-			turretSelections[] = {0};
+			turretTextures[] = {"","a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa"};
 			turretAnimation = "passenger_generic01_foldhands";
 			turretID = 1;
 			attachPos[] = {0,0,0.7}; 
@@ -99,7 +107,7 @@ class CfgRenzVehicles
 		{
 			body = "B_Clouds_MRAP_03_blufor_F";
 			bodyTextures[] = {"a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa","a3\data_f\vehicles\turret_co.paa"};
-			turretSelections[] = {0};
+			turretTextures[] = {"","a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa"};
 			turretAnimation = "passenger_generic01_foldhands";
 			turretID = 1;
 			attachPos[] = {0,0,0.7}; 
@@ -113,7 +121,7 @@ class CfgRenzVehicles
 		{
 			body = "B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F";
 			bodyTextures[] = {"#(rgb,8,8,3)color(0.73,0.7,0.6,0.15)","a3\armor_f_gamma\mbt_01\data\mbt_01_body_co.paa"};
-			turretSelections[] = {};
+			turretTextures[] = {};
 			attachPos[] = {0.3,-0.5,0.6}; 
 			weapons[] = {"autocannon_35mm","missiles_titan_AA"};
 			magazines[] = {"4Rnd_Titan_long_missiles","4Rnd_Titan_long_missiles","680Rnd_35mm_AA_shells_Tracer_Red","680Rnd_35mm_AA_shells_Tracer_Red"};
@@ -125,7 +133,7 @@ class CfgRenzVehicles
 		{
 			body = "B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F";
 			bodyTextures[] = {"","a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa","a3\data_f_exp\vehicles\turret_ghex_co.paa"};
-			turretSelections[] = {};
+			turretTextures[] = {};
 			attachPos[] = {0.34,0.2,0.4}; 
 			weapons[] = {};
 			magazines[] = {"680Rnd_35mm_AA_shells_Tracer_Green"};
@@ -136,8 +144,8 @@ class CfgRenzVehicles
 		class I_APC_tracked_03_cannon_F
 		{
 			body = "B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F";
-			bodyTextures[] = {"","a3\armor_f_epb\apc_tracked_03\data\apc_tracked_03_ext2_indp_co.paa","a3\data_f_exp\vehicles\turret_ghex_co.paa"};
-			turretSelections[] = {};
+			bodyTextures[] = {"","a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa"};
+			turretTextures[] = {"a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa","a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa"};
 			attachPos[] = {0.34,-0.9,0.1}; 
 			weapons[] = {"autocannon_30mm","LMG_coax"};
 			magazines[] = {"140Rnd_30mm_MP_shells_Tracer_Yellow","140Rnd_30mm_MP_shells_Tracer_Yellow","60Rnd_30mm_APFSDS_shells_Tracer_Yellow","60Rnd_30mm_APFSDS_shells_Tracer_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow"};
@@ -150,7 +158,7 @@ class CfgRenzVehicles
 			body = "B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F";
 			bodyMass = 10000;
 			bodyTextures[] = {"#(rgb,8,8,3)color(0.73,0.7,0.6,0.25)","argo\supporterspack_argo\vehicles\data\apc_wheeled_02_ext_02_clouds_01_co.paa","a3\data_f_exp\vehicles\turret_ghex_co.paa"};
-			turretSelections[] = {0,1,3};
+			turretTextures[] = {"","","#(rgb,8,8,3)color(0.73,0.7,0.6,0.25)",""};
 			turretID = 2;
 			attachPos[] = {-0.2,-0.7,0.2}; 
 			weapons[] = {};
@@ -164,7 +172,7 @@ class CfgRenzVehicles
 			body = "B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F";
 			bodyMass = 10000;
 			bodyTextures[] = {"#(rgb,8,8,3)color(0.73,0.7,0.6,0.25)","argo\supporterspack_argo\vehicles\data\apc_wheeled_02_ext_02_clouds_01_co.paa","a3\data_f_exp\vehicles\turret_ghex_co.paa"};
-			turretSelections[] = {0,1};
+			turretTextures[] = {"","","a3\armor_f_beta\apc_wheeled_01\data\apc_wheeled_01_tows_co.paa"};
 			attachPos[] = {0.34,-1.1,0}; 
 			weapons[] = {};
 			magazines[] = {"60Rnd_40mm_GPR_Tracer_Red_shells", "40Rnd_40mm_APFSDS_Tracer_Red_shells"};
@@ -175,7 +183,7 @@ class CfgRenzVehicles
 		{
 			body = "B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F";
 			bodyTextures[] = {"","a3\armor_f_beta\apc_tracked_02\data\rcws30_opfor_co.paa","a3\data_f_exp\vehicles\turret_ghex_co.paa"};
-			turretSelections[] = {};
+			turretTextures[] = {};
 			attachPos[] = {0.34,0.1,0.2}; 
 			weapons[] = {};
 			magazines[] = {"140Rnd_30mm_MP_shells_Tracer_Green","60Rnd_30mm_APFSDS_shells_Tracer_Green"};

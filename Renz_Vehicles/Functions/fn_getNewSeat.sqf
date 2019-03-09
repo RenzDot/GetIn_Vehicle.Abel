@@ -11,7 +11,10 @@ _allPositions = fullCrew [_body, "", true];//[[player, seatType, cargoIndex, gun
 _gunnerSeatPosition = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "turretSeatPosition",0] call BIS_fnc_returnConfigEntry;
 {
 	if ((_x select 2) == _gunnerSeatPosition) exitWith {
-		_allPositions set [_forEachIndex, (fullCrew [_gunner, "gunner", true]) select 0];
+		_gunnerPos = fullCrew [_gunner, "gunner", true];
+		if (count _gunnerPos != 0) then {
+			_allPositions set [_forEachIndex, _gunnerPos select 0];
+		};
 	};
 } forEach _allPositions;
 

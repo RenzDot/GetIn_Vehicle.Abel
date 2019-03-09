@@ -12,7 +12,7 @@ if !(local _turret) exitWith {};
 _config =  (missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _turret);
 _bodyType = [_config,"body",""] call BIS_fnc_returnConfigEntry;
 _bodyTextures = [_config,"bodyTextures",[]] call BIS_fnc_returnConfigEntry;
-_turretSelections = [_config, "turretSelections",[]] call BIS_fnc_returnConfigEntry;
+_turretTextures = [_config, "turretTextures",[]] call BIS_fnc_returnConfigEntry;
 _turretAnimation = [_config, "turretAnimation", ""] call BIS_fnc_returnConfigEntry;
 _turretID = [_config, "turretID",-1] call BIS_fnc_returnConfigEntry;
 _attachPos = [_config, "attachPos", [0,0,0]] call BIS_fnc_returnConfigEntry;
@@ -34,7 +34,7 @@ _turret attachTo [_body,_attachPos];
 _body setPosATL _pos;
 
 {_body setObjectTextureGlobal [_forEachIndex, _x]} forEach _bodyTextures;
-{_turret setObjectTextureGlobal [_x,""]} forEach _turretSelections;
+{_turret setObjectTextureGlobal [_forEachIndex, _x]} forEach _turretTextures;
 {_turret addWeapon _x} forEach _weapons;
 {_turret addMagazine _x} forEach _magazines; 
 
