@@ -43,7 +43,7 @@ if (_newSeatType in ["gunner","driver"]) then {
 
 		//Fix for gunner animation
 		if (!isNull objectParent player && _newSeatType == "gunner") then {
-			_animation =  [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "turretAnimation",""] call BIS_fnc_returnConfigEntry;
+			_animation =  [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "gunnerAnimation",""] call BIS_fnc_returnConfigEntry;
 			[player, _animation] call Renz_fnc_switchMoveGlobal;
 		};
 		deleteVehicle _bouncer;

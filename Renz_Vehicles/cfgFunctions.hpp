@@ -20,7 +20,7 @@ class CfgFunctions {
 			fnc(switchMoveGlobal);
 			fnc(addVehActionGlobal);
 			fnc(addVehActionJIP);
-			fnc(getTurretBody);
+			fnc(getGunnerBody);
 			fnc(getIn);
 			fnc(getNewSeat);
 		}

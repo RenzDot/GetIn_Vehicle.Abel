@@ -26,17 +26,12 @@ if (isNull _vehicle) exitWith {
 	};
 };
 
-(_vehicle call Renz_fnc_getTurretBody) params ["_turret", "_body"];
-if (isNull _turret) exitWith {};
+(_vehicle call Renz_fnc_getGunnerBody) params ["_gunner", "_body"];
+if (isNull _gunner) exitWith {};
 
-_config = configfile >> "CfgVehicles" >> typeOf _turret;
+_config = configfile >> "CfgVehicles" >> typeOf _gunner;
 _icon = [_config,"picture",""] call BIS_fnc_returnConfigEntry;
 _title = ["Get in... <img size = '2' image ='" + _icon + "' />","Get in..."] select (_icon == "");
-
-_getIn = {
-	params ["_vehicle"];
-	[_vehicle, true] call Renz_fnc_switchSeat;
-};
 
 {
 	_x addAction [
@@ -50,10 +45,10 @@ _getIn = {
 		"(side _target) in [side player, civilian] && vehicle player == player && alive _target",
 		7
 	];
-} forEach [_turret, _body];
+} forEach [_gunner, _body];
 
 //addAction for all clients
 if (_isFirstCaller) then {
-	renz_addVehActionEvent = [netId _turret];
+	renz_addVehActionEvent = [netId _gunner];
 	publicVariableServer "renz_addVehActionEvent";
 };

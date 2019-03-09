@@ -3,7 +3,7 @@
 // Author: Renz
 // 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-if (vehicle player == player) exitWith {};
+if (isNull objectParent player) exitWith {};
 player action ["GetOut", vehicle player];
 3344 cutText ["","PLAIN DOWN"];
 
