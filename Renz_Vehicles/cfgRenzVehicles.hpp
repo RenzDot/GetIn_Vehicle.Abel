@@ -3,6 +3,11 @@ class CfgRenzVehicles
 
 	class Vehicles
 	{
+		class O_Flames_MRAP_01_flames_01_F 
+		{
+			seatFunction = "car";
+		}
+		
 		class B_MRAP_01_F
 		{
 			body = "O_Flames_MRAP_01_flames_01_F";

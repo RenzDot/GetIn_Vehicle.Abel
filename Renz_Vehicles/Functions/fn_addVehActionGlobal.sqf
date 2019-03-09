@@ -27,9 +27,9 @@ if (isNull _vehicle) exitWith {
 };
 
 (_vehicle call Renz_fnc_getGunnerBody) params ["_gunner", "_body"];
-if (isNull _gunner) exitWith {};
+//if (isNull _gunner) exitWith {};
 
-_config = configfile >> "CfgVehicles" >> typeOf _gunner;
+_config = configfile >> "CfgVehicles" >> ([typeOf _gunner, typeOf _body] select (isNull _gunner));
 _icon = [_config,"picture",""] call BIS_fnc_returnConfigEntry;
 _title = ["Get in... <img size = '2' image ='" + _icon + "' />","Get in..."] select (_icon == "");
 
@@ -49,6 +49,6 @@ _title = ["Get in... <img size = '2' image ='" + _icon + "' />","Get in..."] sel
 
 //addAction for all clients
 if (_isFirstCaller) then {
-	renz_addVehActionEvent = [netId _gunner];
+	renz_addVehActionEvent = [netId _body];
 	publicVariableServer "renz_addVehActionEvent";
 };

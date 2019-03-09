@@ -8,15 +8,17 @@ params ["_gunner","_body","_goRight"];
 _allPositions = fullCrew [_body, "", true];//[[player, seatType, cargoIndex, gunnerIndex, isFFV], ...]
 
 //Replace cargo 0 with gunner seat
-_gunnerSeatPosition = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "gunnerSeatPosition",0] call BIS_fnc_returnConfigEntry;
-{
-	if ((_x select 2) == _gunnerSeatPosition) exitWith {
-		_gunnerPos = fullCrew [_gunner, "gunner", true];
-		if (count _gunnerPos != 0) then {
-			_allPositions set [_forEachIndex, _gunnerPos select 0];
+if (!isNull _gunner) then {
+	_gunnerSeatPosition = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "gunnerSeatPosition",0] call BIS_fnc_returnConfigEntry;
+	{
+		if ((_x select 2) == _gunnerSeatPosition) exitWith {
+			_gunnerPos = fullCrew [_gunner, "gunner", true];
+			if (count _gunnerPos != 0) then {
+				_allPositions set [_forEachIndex, _gunnerPos select 0];
+			};
 		};
-	};
-} forEach _allPositions;
+	} forEach _allPositions;
+};
 
 //Get current seat pos 
 _currentPos = -1;

@@ -5,12 +5,12 @@
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 params ["_vehicle","_goRight"];
-(_vehicle call Renz_fnc_getGunnerBody) params ["_gunner","_body"];
-if (_gunner == _body) exitWith {};
+if (isNull objectParent Player) exitWith {};
 
+(_vehicle call Renz_fnc_getGunnerBody) params ["_gunner","_body"];
 _newSeatPos = [_gunner,_body,_goRight] call Renz_fnc_getNewSeat;
 
-_switchFnc = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "seatFunction", ""] call BIS_fnc_returnConfigEntry;
+_switchFnc = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> ( [typeOf _gunner,typeOf _body] select (isNull _gunner)) ), "seatFunction", ""] call BIS_fnc_returnConfigEntry;
 if (_switchFnc == "tank") exitWith {
 	[_gunner, _body, _newSeatPos] call Renz_fnc_switchSeatTank;
 };
