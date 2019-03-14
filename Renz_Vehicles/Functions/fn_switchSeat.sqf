@@ -21,5 +21,5 @@ if (_switchFnc == "car") exitWith {
 
 if (_switchFnc == "air") exitWith {
 	[_gunner, _body, _newSeatPos] call Renz_fnc_switchSeatAir;
-}
+};
 

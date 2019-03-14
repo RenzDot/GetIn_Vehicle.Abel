@@ -18,6 +18,42 @@ class CfgRenzVehicles
 			seatFunction = "car";
 		}
 
+		class B_Clouds_Heli_Light_02_unarmed_clouds_01_F
+		{
+			body = "B_Clouds_Heli_Light_02_unarmed_clouds_01_F";
+			bodyTextures[] = {"a3\air_f\heli_light_02\data\heli_light_02_ext_co.paa"};
+			weapons[] = {"CMFlareLauncher"};
+			magazines[] = {"240Rnd_CMFlare_Chaff_Magazine"};
+			seatFunction = "air";
+		}
+
+		class B_Clouds_Heli_Light_02_unarmed_cloudrider_01_AM 
+		{
+			body = "a3\soft_f_epc\truck_03\data\truck_03_ext01_co.paa";
+			bodyTextures[] = {};
+			weapons[] = {"CMFlareLauncher"};
+			magazines[] = {"240Rnd_CMFlare_Chaff_Magazine"};
+			seatFunction = "air";
+		}
+
+		class O_Heli_Light_02_v2_F
+		{
+			body = "B_Clouds_Heli_Light_02_unarmed_cloudrider_01_AM";
+			bodyTextures[] = {"a3\air_f_heli\heli_light_02\data\heli_light_02_ext_opfor_v2_co.paa","a3\air_f_heli\heli_light_02\data\rockets_co.paa"};
+			weapons[] = {"CMFlareLauncher","gatling_20mm_VTOL_01","rockets_230mm_GAT"};			
+			magazines[] = {"240Rnd_CMFlare_Chaff_Magazine","4000Rnd_20mm_Tracer_Red_shells","12Rnd_230mm_rockets","12Rnd_230mm_rockets"};
+			seatFunction = "air";
+		}
+
+		class O_Heli_Light_02_F
+		{
+			body = "B_Clouds_Heli_Light_02_unarmed_clouds_01_F";
+			bodyTextures[] = {"a3\air_f\heli_light_02\data\heli_light_02_ext_opfor_co.paa"};
+			weapons[] = {"CMFlareLauncher","gatling_20mm_VTOL_01","rockets_230mm_GAT"};			
+			magazines[] = {"240Rnd_CMFlare_Chaff_Magazine","4000Rnd_20mm_Tracer_Red_shells","12Rnd_230mm_rockets","12Rnd_230mm_rockets"};
+			seatFunction = "air";
+		}
+
 		class O_G_Offroad_01_F 
 		{
 			body = "O_Flames_Offroad_01_flames_01_F";

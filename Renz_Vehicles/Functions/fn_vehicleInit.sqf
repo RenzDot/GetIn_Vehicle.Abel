@@ -42,7 +42,7 @@ if (_seatFunction in ["car","tank"]) then {
 		{_gunner addMagazine _x} forEach _magazines; 
 
 		_gunner addEventHandler ["Deleted", {	deleteVehicle (attachedTo (_this select 0))	}];
-		_gunner addEventHandler ["Killed",{	(attachedTo (_this select 0)) setDamage [1,false]	}];
+		_gunner addEventHandler ["Killed",{	(attachedTo (_this select 0)) setDamage 1	}];
 
 		_body addEventHandler ["Deleted",{
 			_gunner = ((_this select 0) call Renz_fnc_getGunnerBody) select 0;
@@ -50,12 +50,19 @@ if (_seatFunction in ["car","tank"]) then {
 		}];
 		_body addEventHandler ["Killed",{
 			_gunner = ((_this select 0) call Renz_fnc_getGunnerBody) select 0;
-			_gunner setDamage [1,false];
+			_gunner setDamage 1;
 		}];
 	} else {
 		deleteVehicle _gunner;
 	};
 };
+
+if (_seatFunction == "air") then {
+	{_body addWeapon _x} forEach _weapons;
+	{_body addMagazine _x} forEach _magazines; 
+	deleteVehicle _gunner; 
+};
+
 _body setPosATL _pos;
 
 //addAction to vehicle
