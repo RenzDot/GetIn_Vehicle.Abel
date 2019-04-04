@@ -5,7 +5,7 @@
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 params ["_vehicle"];
-(_vehicle call Renz_fnc_getgunnerBody) params ["_gunner","_body"];
+(_vehicle call Renz_fnc_vehicleGetgunnerBody) params ["_gunner","_body"];
 
 //Obtain all seat positions
 _allPositions = fullCrew [_body, "", true];//[[player, seatType, cargoIndex, gunnerIndex, isFFV], ...]
@@ -27,7 +27,7 @@ _newSeatIndex = -1;
 } forEach _allPositions;
 
 if (_newSeatIndex == -1) exitWith {
-	["","All seats taken"] execVM Renz_fnc_showSeat;
+	["","All seats taken"] execVM Renz_fnc_vehicleShowSeat;
 };
 
 _newSeatPos = _allPositions select _newSeatIndex;
@@ -62,7 +62,7 @@ if (_seatType == "gunner") then {
 			diag_tickTime > _endTime;
 		};
 		_animation = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "gunnerAnimation",""] call BIS_fnc_returnConfigEntry;
-		[player, _animation] call Renz_fnc_switchMoveGlobal;
+		[player, _animation] call Renz_fnc_vehicleSwitchMoveGlobal;
 		deleteVehicle _bouncer;
 	};
 } else {

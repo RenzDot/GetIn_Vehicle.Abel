@@ -6,20 +6,20 @@
 
 //Force eject keybind
 {
-	[_x, "call Renz_fnc_forceEject"] spawn Renz_fnc_addKeybind;
+	[_x, "call Renz_fnc_vehicleForceEject"] spawn Renz_fnc_vehicleAddKeybind;
 } forEach (actionKeys "Eject") + (actionKeys "GetOut");
 
 //Switch seat keybind
-[27,"[vehicle player, true] call Renz_fnc_switchSeat"] spawn Renz_fnc_addKeybind;
-[26,"[vehicle player, false] call Renz_fnc_switchSeat"] spawn Renz_fnc_addKeybind;
+[27,"[vehicle player, true] call Renz_fnc_vehicleSwitchSeat"] spawn Renz_fnc_vehicleAddKeybind;
+[26,"[vehicle player, false] call Renz_fnc_vehicleSwitchSeat"] spawn Renz_fnc_vehicleAddKeybind;
 
 //Vehicle third person
 call Renz_fnc_vehicleCamera;
 
 //Setup global variables
-call Renz_fnc_switchMoveGlobal;
-call Renz_fnc_addVehActionGlobal;
-call Renz_fnc_addVehActionJIP;
+call Renz_fnc_vehicleSwitchMoveGlobal;
+call Renz_fnc_vehicleAddactionGlobal;
+call Renz_fnc_vehicleAddactionJIP;
 
 systemchat "Client init done";
 

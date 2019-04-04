@@ -7,7 +7,7 @@
 params ["_gunner","_body","_newSeatPos"];
 
 if (count _newSeatPos == 0) exitWith {
-	["","All seats taken"] call Renz_fnc_showSeat;
+	["","All seats taken"] call Renz_fnc_vehicleShowSeat;
 };
 
 //Workaround since moveInTurret/moveInGunner is broken for gunner
@@ -44,7 +44,7 @@ if (_newSeatType in ["gunner","driver"]) then {
 		//Fix for gunner animation
 		if (!isNull objectParent player && _newSeatType == "gunner") then {
 			_animation =  [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "gunnerAnimation",""] call BIS_fnc_returnConfigEntry;
-			[player, _animation] call Renz_fnc_switchMoveGlobal;
+			[player, _animation] call Renz_fnc_vehicleSwitchMoveGlobal;
 		};
 		deleteVehicle _bouncer;
 	};
@@ -91,6 +91,6 @@ if (_newSeatType in ["gunner","driver"]) then {
 
 [	(_newSeatPos select 1), 
 	["", str (_newSeatPos select 2)] select ((_newSeatPos select 2) != -1)
-] call Renz_fnc_showSeat;
+] call Renz_fnc_vehicleShowSeat;
 
 /*

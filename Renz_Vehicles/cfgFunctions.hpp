@@ -10,18 +10,19 @@ class Renz_Vehicles
 		file = "Renz_Vehicles\Functions";
 		fnc(vehicleInit);
 		fnc(vehicleCamera);
-		fnc(addKeybind);
-		fnc(forceEject);
-		fnc(switchSeat);
-		fnc(switchSeatCar);
-		fnc(switchSeatTank);
-		fnc(switchSeatAir);
-		fnc(showSeat);
-		fnc(switchMoveGlobal);
-		fnc(addVehActionGlobal);
-		fnc(addVehActionJIP);
-		fnc(getGunnerBody);
-		fnc(getIn);
-		fnc(getNewSeat);
+		fnc(vehicleAddKeybind);
+		fnc(vehicleForceEject);
+		fnc(vehicleSwitchSeat);
+		fnc(vehicleSwitchSeatCar);
+		fnc(vehicleSwitchSeatTank);
+		fnc(vehicleSwitchSeatAir);
+		fnc(vehicleShowSeat);
+		fnc(vehicleSwitchMoveGlobal);
+		fnc(vehicleAddActionGlobal);
+		fnc(vehicleAddActionJIP);
+		fnc(vehicleGetGunnerBody);
+		fnc(vehicleGetIn);
+		fnc(vehicleGetNewSeat);
+		fnc(vehicleConfigSetup);
 	}
 }

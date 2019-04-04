@@ -7,27 +7,20 @@
 params [["_gunner",objNull]];
  
 if !(local _gunner) exitWith {};
-if (isNil "Renz_Vehicle_Configs") then {
-	call Renz_fnc_vehicleConfigSetup;
-};
-
-_vehIndex = (Renz_Vehicle_Types find (typeOf _gunner));
-if (_vehIndex == -1) exitWith {systemChat (typeOf _gunner + " does not exist")};
 
 //>>>>> Vehicle Config
-_vehConfig = Renz_Vehicle_Configs select _vehIndex;
-_bodyType = _vehConfig select 1;
-_bodyTextures = _vehConfig select 2;
-_gunnerTextures = _vehConfig select 3;
-_gunnerAnimation = _vehConfig select 4;
-_attachPos = _vehConfig select 5;
-_weapons = _vehConfig select 6;
-_magazines = _vehConfig select 7;
-_mass = _vehConfig select 8;
-_seatFunction = _vehConfig select 9;
-_hitParts = _vehConfig select 10;
-_isTracked = _vehConfig select 11;
-_compositeType = _vehConfig select 12;
+_config =  (missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner);
+_bodyType = [_config,"body",""] call BIS_fnc_returnConfigEntry;
+_bodyTextures = [_config,"bodyTextures",[]] call BIS_fnc_returnConfigEntry;
+_gunnerTextures = [_config, "gunnerTextures",[]] call BIS_fnc_returnConfigEntry;
+_gunnerAnimation = [_config, "gunnerAnimation", ""] call BIS_fnc_returnConfigEntry;
+_attachPos = [_config, "attachPos", [0,0,0]] call BIS_fnc_returnConfigEntry;
+_weapons = [_config, "weapons",[]] call BIS_fnc_returnConfigEntry;
+_magazines = [_config, "magazines",[]] call BIS_fnc_returnConfigEntry;
+_mass = [_config, "bodyMass",-1] call BIS_fnc_returnConfigEntry;
+_seatFunction = [_config, "seatFunction", ""] call BIS_fnc_returnConfigEntry;
+_hitParts = [_config, "hitParts",[]] call BIS_fnc_returnConfigEntry;
+_isTracked = [_config, "isTracked", 0] call BIS_fnc_returnConfigEntry;
 
 //>>>>> Setup Body
 _pos = getPosATL _gunner;
@@ -73,4 +66,4 @@ if (_seatFunction == "air") then {
 _body setPosATL _pos;
 
 //addAction to vehicle
-[_body, true] call Renz_fnc_vehicleAddactionGlobal;
+[_body, true] call Renz_fnc_vehicleAddVehActionGlobal;

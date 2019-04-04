@@ -16,7 +16,7 @@ if (isNull _vehicle) exitWith {
 	"renz_addVehActionEvent" addPublicVariableEventHandler {
 		(_this select 1) params ["_netId"];
 		_vehicle = objectFromNetId _netId;
-		[_vehicle, false] call Renz_fnc_addVehActionGlobal;
+		[_vehicle, false] call Renz_fnc_vehicleAddactionGlobal;
 
 		if (isServer) then {
 			renz_addVehActionEvent = [_netId, false];
@@ -26,7 +26,7 @@ if (isNull _vehicle) exitWith {
 	};
 };
 
-(_vehicle call Renz_fnc_getGunnerBody) params ["_gunner", "_body"];
+(_vehicle call Renz_fnc_vehicleGetGunnerBody) params ["_gunner", "_body"];
 //if (isNull _gunner) exitWith {};
 
 _config = configfile >> "CfgVehicles" >> ([typeOf _gunner, typeOf _body] select (isNull _gunner));
@@ -36,7 +36,7 @@ _title = ["Get in... <img size = '2' image ='" + _icon + "' />","Get in..."] sel
 {
 	_x addAction [
 		_title, 
-		Renz_fnc_getIn,
+		Renz_fnc_vehicleGetIn,
 		[],
 		1,
 		true,

@@ -7,7 +7,7 @@
 params ["_gunner","_body","_newSeatPos"];
 
 if (count _newSeatPos == 0) exitWith {
-	["","All seats taken"] call Renz_fnc_showSeat;
+	["","All seats taken"] call Renz_fnc_vehicleShowSeat;
 };
 
 //Move in cargo or Fire From Vehicle seat
@@ -74,4 +74,4 @@ if (_newSeatType in ["cargo","Turret"]) then {
 
 [	(_newSeatPos select 1), 
 	["", str (_newSeatPos select 2)] select ((_newSeatPos select 2) != -1)
-] call Renz_fnc_showSeat;
+] call Renz_fnc_vehicleShowSeat;
