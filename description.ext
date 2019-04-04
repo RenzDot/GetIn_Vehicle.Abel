@@ -14,5 +14,9 @@ corpseRemovalMaxTime = 300;
 
 allowFunctionsRecompile = 1;//Remove on finalisation
 
-#include "Renz_Vehicles\cfgSetup.hpp"
+class CfgFunctions {
+	#include "Renz_Vehicles\cfgFunctions.hpp"
+};
+
+#include "Renz_Vehicles\cfgRenzVehicles.hpp"
 #include "KKSB\KKSB.ext"
