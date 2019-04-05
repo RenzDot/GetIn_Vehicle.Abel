@@ -42,12 +42,12 @@ v = air + tank + car + static + boat;
 [] execVM "Renz_Vehicles\clientInit.sqf";
 
 _pos = getPos player; 
-if (!isMultiplayer) then {
+/*if (!isMultiplayer) then {
 	{
 		createVehicle [_x, getMarkerPos "marker_0",[],0,"NONE"];
 		sleep 0.1;
 	} forEach v;
-};
+};*/
 	
 
 forceFire = (findDisplay 46) displayAddEventHandler ["KeyDown", {

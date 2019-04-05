@@ -42,7 +42,6 @@ Renz_Vehicle_Configs = [
 	[
 		"O_APC_Tracked_02_cannon_F",//_vehType
 		"B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F",//_bodyType
-		//["","a3\armor_f_beta\apc_tracked_02\data\rcws30_opfor_co.paa","a3\data_f_exp\vehicles\turret_ghex_co.paa"],//_bodyTextures 
 		["","",""],//_bodyTextures 
 		[],//_gunnerTextures 
 		"",//_gunnerAnimation 
@@ -94,7 +93,7 @@ Renz_Vehicle_Configs = [
 	[
 		"I_APC_tracked_03_cannon_F",//_vehType
 		"B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F",//_bodyType
-		["","a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa"],//_bodyTextures 
+		["",""],//_bodyTextures 
 		["a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa","a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa"],//_gunnerTextures 
 		"",//_gunnerAnimation 
 		[0.34,-0.9,0.1],//_attachPos
@@ -111,7 +110,7 @@ Renz_Vehicle_Configs = [
 	[
 		"O_APC_Tracked_02_AA_F",//_vehType
 		"B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F",//_bodyType
-		["","a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa","a3\data_f_exp\vehicles\turret_ghex_co.paa"],//_bodyTextures 
+		["","",""],//_bodyTextures 
 		[],//_gunnerTextures 
 		"",//_gunnerAnimation 
 		[0.34,0.2,0.4],//_attachPos
@@ -128,12 +127,12 @@ Renz_Vehicle_Configs = [
 	[
 		"B_APC_Tracked_01_AA_F",//_vehType
 		"B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F",//_bodyType
-		["","a3\armor_f_gamma\mbt_01\data\mbt_01_body_co.paa"],//_bodyTextures 
+		["",""],//_bodyTextures 
 		[],//_gunnerTextures 
 		"",//_gunnerAnimation 
 		[0.3,-0.5,0.6],//_attachPos
 		["autocannon_35mm","missiles_titan_AA"],//_weapons
-		["4Rnd_Titan_long_missiles_O","4Rnd_Titan_long_missiles_O","680Rnd_35mm_AA_shells_Tracer_Red","680Rnd_35mm_AA_shells_Tracer_Red"],//_magazines
+		["680Rnd_35mm_AA_shells_Tracer_Red","680Rnd_35mm_AA_shells_Tracer_Red","4Rnd_Titan_long_missiles","4Rnd_Titan_long_missiles"],//_magazines
 		-1,//_mass 
 		"tank",//_seatFunction 
 		[],//_hitParts 
@@ -186,7 +185,7 @@ Renz_Vehicle_Configs = [
 		[],//_weapons
 		[],//_magazines
 		-1,//_mass 
-		"",//_seatFunction 
+		"car",//_seatFunction 
 		[],//_hitParts 
 		0,//_isTracked 
 		1,//_compositeType 
@@ -254,7 +253,7 @@ Renz_Vehicle_Configs = [
 		["HMG_M2"],//_weapons
 		["100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red"],//_magazines
 		-1,//_mass 
-		"",//_seatFunction 
+		"car",//_seatFunction 
 		[],//_hitParts 
 		0,//_isTracked 
 		1,//_compositeType 
@@ -421,10 +420,10 @@ Renz_Vehicle_Configs = [
 		[],//_gunnerTextures 
 		"",//_gunnerAnimation 
 		[0,0,0],//_attachPos
-			["CMFlareLauncher","gatling_20mm_VTOL_01","missiles_DAGR"],//_weapons
+		["CMFlareLauncher","gatling_20mm_VTOL_01","missiles_DAGR"],//_weapons
 		["240Rnd_CMFlare_Chaff_Magazine","4000Rnd_20mm_Tracer_Red_shells","12Rnd_PG_missiles"],//_magazines
 		-1,//_mass 
-		"",//_seatFunction 
+		"air",//_seatFunction 
 		[],//_hitParts 
 		0,//_isTracked 
 		1,//_compositeType 
