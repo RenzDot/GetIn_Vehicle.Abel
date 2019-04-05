@@ -45,12 +45,14 @@ _gunner lock true;
 if (_seatFunction in ["car","tank"]) then {
 	if (count allTurrets _gunner > 0) then {
 		_gunner attachTo [_body,_attachPos];
-		_gunner setVariable ["Renz_seatFunction", _seatFunction, true];
-		_gunner setVariable ["Renz_gunnerSeatPosition", _gunnerSeatPosition, true];
 		{_gunner setHit [_x, 1, false]} forEach _hitParts;
 		{_gunner setObjectTextureGlobal [_forEachIndex, _x]} forEach _gunnerTextures;
 		{_gunner addWeapon _x} forEach _weapons;
 		{_gunner addMagazine _x} forEach _magazines; 
+
+		_gunner setVariable ["Renz_seatFunction", _seatFunction, true];
+		if (_gunnerAnimation != "") then {_gunner setVariable ["Renz_gunnerAnimation", _gunnerAnimation, true] };
+		if (_gunnerSeatPosition != 0) then {_gunner setVariable ["Renz_gunnerSeatPosition", _gunnerSeatPosition, true] };
 
 		_gunner addEventHandler ["Deleted", {	deleteVehicle (attachedTo (_this select 0))	}];
 		_gunner addEventHandler ["Killed",{	(attachedTo (_this select 0)) setDamage 1	}];

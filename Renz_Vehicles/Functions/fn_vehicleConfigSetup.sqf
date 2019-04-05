@@ -365,7 +365,7 @@ Renz_Vehicle_Configs = [
 	[
 		"O_Flames_MRAP_01_flames_01_F",//_vehType
 		"O_Flames_MRAP_01_flames_01_F",//_bodyType
-		["a3\soft_f_bootcamp\offroad_01\data\offroad_01_ext_ig_05_co.paa","a3\soft_f_bootcamp\offroad_01\data\offroad_01_ext_ig_05_co.paa"],//_bodyTextures 
+		[],//_bodyTextures 
 		[],//_gunnerTextures 
 		"",//_gunnerAnimation 
 		[0,0,0],//_attachPos
@@ -461,7 +461,7 @@ Renz_Vehicle_Configs = [
 		[],//_hitParts 
 		0,//_isTracked 
 		0,//_compositeType 
-		0//_gunnerSeatPosition
+		-1//_gunnerSeatPosition
 	],
 
 	[
@@ -478,7 +478,7 @@ Renz_Vehicle_Configs = [
 		[],//_hitParts 
 		0,//_isTracked 
 		0,//_compositeType 
-		0//_gunnerSeatPosition
+		-1//_gunnerSeatPosition
 	],
 
 	[
@@ -495,7 +495,7 @@ Renz_Vehicle_Configs = [
 		[],//_hitParts 
 		0,//_isTracked 
 		0,//_compositeType 
-		0//_gunnerSeatPosition
+		-1//_gunnerSeatPosition
 	],
 
 	[
@@ -512,9 +512,59 @@ Renz_Vehicle_Configs = [
 		[],//_hitParts 
 		0,//_isTracked 
 		0,//_compositeType 
-		0//_gunnerSeatPosition
-	]
+		-1//_gunnerSeatPosition
+	],
 
+	[
+		"O_Flames_Offroad_01_halloween_witch_01_AM",//_vehType
+		"O_Flames_Offroad_01_halloween_witch_01_AM",//_bodyType
+		[],//_bodyTextures 
+		[],//_gunnerTextures 
+		"",//_gunnerAnimation 
+		[0,0,0],//_attachPos
+		[],//_weapons
+		[],//_magazines
+		-1,//_mass 
+		"car",//_seatFunction 
+		[],//_hitParts 
+		0,//_isTracked 
+		0,//_compositeType 
+		-1//_gunnerSeatPosition
+	],
+
+	[
+		"B_Clouds_MRAP_03_blufor_F",//_vehType
+		"B_Clouds_MRAP_03_blufor_F",//_bodyType
+		[],//_bodyTextures 
+		[],//_gunnerTextures 
+		"",//_gunnerAnimation 
+		[0,0,0],//_attachPos
+		[],//_weapons
+		[],//_magazines
+		-1,//_mass 
+		"car",//_seatFunction 
+		[],//_hitParts 
+		0,//_isTracked 
+		0,//_compositeType 
+		-1//_gunnerSeatPosition
+	],
+
+	[
+		"B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F",//_vehType
+		"B_Clouds_APC_Wheeled_02_unarmed_clouds_01_F",//_bodyType
+		[],//_bodyTextures 
+		[],//_gunnerTextures 
+		"",//_gunnerAnimation 
+		[0,0,0],//_attachPos
+		[],//_weapons
+		[],//_magazines
+		-1,//_mass 
+		"car",//_seatFunction 
+		[],//_hitParts 
+		0,//_isTracked 
+		0,//_compositeType 
+		-1//_gunnerSeatPosition
+	]
 
 ];
 

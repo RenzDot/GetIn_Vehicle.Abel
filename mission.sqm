@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={687.63495,85.566437,12162.754};
-		dir[]={0.80611777,-0.30142459,0.5093596};
-		up[]={0.25487185,0.95347267,0.16104566};
-		aside[]={0.53419924,5.5841519e-007,-0.84543538};
+		pos[]={720.72211,67.913162,12183.986};
+		dir[]={0.84205675,-0.53266186,-0.085698977};
+		up[]={0.52996463,0.84630543,-0.053935867};
+		aside[]={-0.10126024,1.4019315e-006,-0.9949261};
 	};
 };
 binarizationWanted=0;
@@ -227,7 +227,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={790.125,28.923538,12206.675};
+						position[]={816.125,28.931438,12181.425};
 					};
 					side="West";
 					flags=7;
@@ -334,6 +334,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="0 = this call Renz_fnc_vehicleInit";
 				name="tank0";
 			};
 			id=15;
@@ -597,7 +598,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={832.875,30.761919,12186.625};
+				position[]={833.25,30.761919,12186.875};
 				angles[]={0,4.6949358,0};
 			};
 			side="Empty";
@@ -622,6 +623,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="0 = this call Renz_fnc_vehicleInit";
 				name="car2";
 			};
 			id=50;
@@ -639,6 +641,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="0 = this call Renz_fnc_vehicleInit";
 				name="car3";
 			};
 			id=51;
@@ -976,7 +979,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={771.5,31.089647,12228.39};
-				angles[]={-0,4.8694687,0};
+				angles[]={0,4.8694687,0};
 			};
 			side="Empty";
 			flags=4;

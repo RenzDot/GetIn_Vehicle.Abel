@@ -40,7 +40,7 @@ if (_seatType == "gunner") then {
 	
 	//Another workaround to make moveInAny work for car gunners
 	_bouncer = objNull;
-	_seatFunction = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "seatFunction",""] call BIS_fnc_returnConfigEntry;
+	_seatFunction = _gunner getVariable ["Renz_seatFunction","tank"];
 	if (_seatFunction == "car") then {
 		_hasEmptyCommander = count ((fullCrew [_gunner, "commander",true]) - (fullCrew [_gunner, "commander"])) == 1;
 
@@ -63,7 +63,7 @@ if (_seatType == "gunner") then {
 			};
 			diag_tickTime > _endTime;
 		};
-		_animation = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "gunnerAnimation",""] call BIS_fnc_returnConfigEntry;
+		_animation = _gunner getVariable ["Renz_gunnerAnimation",""];
 		[player, _animation] call Renz_fnc_vehicleSwitchMoveGlobal;
 		deleteVehicle _bouncer;
 	};

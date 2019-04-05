@@ -60,7 +60,6 @@ if (_newSeatType in ["cargo","Turret"]) then {
 			case "turret" : { {player moveInTurret [_body, (_newSeatPos select 3)]} };
 		};
 		
-		systemChat str _newSeatPos;
 		//Workaround since moveInDriver/moveInTurret/moveInCommander is not instant
 		moveOut player;
 		_endTime = diag_tickTime + 0.5;
