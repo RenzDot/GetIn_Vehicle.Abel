@@ -57,10 +57,10 @@ if (_newSeatType in ["cargo","Turret"]) then {
 
 		_getInDriverOrGunner = switch (toLower (_newSeatPos select 1)) do {
 			case "driver" : { {player moveInDriver _body} };
-			case "gunner" : { {player moveInTurret [_gunner, (_newSeatPos select 3)]} };
-			case "commander" : { {player moveInCommander _gunner} };
+			case "turret" : { {player moveInTurret [_body, (_newSeatPos select 3)]} };
 		};
 		
+		systemChat str _newSeatPos;
 		//Workaround since moveInDriver/moveInTurret/moveInCommander is not instant
 		moveOut player;
 		_endTime = diag_tickTime + 0.5;
