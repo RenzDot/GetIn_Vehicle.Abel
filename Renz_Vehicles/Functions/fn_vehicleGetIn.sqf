@@ -11,7 +11,7 @@ params ["_vehicle"];
 _allPositions = fullCrew [_body, "", true];//[[player, seatType, cargoIndex, gunnerIndex, isFFV], ...]
 
 //Replace cargo with gunner seat
-_gunnerSeatPosition = [(missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _gunner), "gunnerSeatPosition",0] call BIS_fnc_returnConfigEntry;
+_gunnerSeatPosition = _gunner getVariable ["gunnerSeatPosition",0];
 {
 	if ((_x select 2) == _gunnerSeatPosition) exitWith {
 		_allPositions set [_forEachIndex, (fullCrew [_gunner, "gunner", true]) select 0];

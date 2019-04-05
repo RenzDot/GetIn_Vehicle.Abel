@@ -28,6 +28,7 @@ _seatFunction = _vehConfig select 9;
 _hitParts = _vehConfig select 10;
 _isTracked = _vehConfig select 11;
 _compositeType = _vehConfig select 12;
+_gunnerSeatPosition = _vehConfig select 13;
 
 //>>>>> Setup Body
 _pos = getPosATL _gunner;
@@ -40,9 +41,9 @@ _gunner lock true;
 
 //>>>>> Connect Gunner to Body
 if (_seatFunction in ["car","tank"]) then {
-
 	if (count allTurrets _gunner > 0) then {
 		_gunner attachTo [_body,_attachPos];
+		_gunner setVariable ["gunnerSeatPosition", _gunnerSeatPosition];
 		{_gunner setHit [_x, 1, false]} forEach _hitParts;
 		{_gunner setObjectTextureGlobal [_forEachIndex, _x]} forEach _gunnerTextures;
 		{_gunner addWeapon _x} forEach _weapons;
@@ -59,7 +60,7 @@ if (_seatFunction in ["car","tank"]) then {
 			_gunner = ((_this select 0) call Renz_fnc_vehicleGetGunnerBody) select 0;
 			_gunner setDamage 1;
 		}];
-	} else {
+	} else {//Unarmed vehicle
 		deleteVehicle _gunner;
 	};
 };

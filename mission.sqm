@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={760.27155,60.665451,12219.046};
-		dir[]={0.7595259,-0.64259207,-0.10146329};
-		up[]={0.63695413,0.76618963,-0.085089795};
-		aside[]={-0.13242009,1.2314413e-006,-0.99123722};
+		pos[]={749.77246,58.230759,12138.268};
+		dir[]={0.81213111,-0.42937419,0.39521226};
+		up[]={0.38612846,0.90310472,0.18790373};
+		aside[]={0.43759418,5.5757118e-007,-0.89923072};
 	};
 };
 binarizationWanted=0;
@@ -227,7 +227,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={801.5,28.931438,12215.8};
+						position[]={825.75,28.931438,12181.05};
 					};
 					side="West";
 					flags=7;
@@ -264,7 +264,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={808.625,28.931438,12160.3};
+						position[]={791.25,28.924438,12135.8};
 						angles[]={0,4.6774826,0};
 					};
 					side="West";
@@ -344,7 +344,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={807,31.392696,12184.375};
+				position[]={804.875,31.392696,12186.375};
 				angles[]={0,4.712389,0};
 			};
 			side="Empty";
@@ -604,6 +604,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="0 = this call Renz_fnc_vehicleInit";
 				name="car1";
 			};
 			id=49;
@@ -655,6 +656,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="0 = this call Renz_fnc_vehicleInit";
 				name="car4";
 			};
 			id=52;
@@ -672,6 +674,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="0 = this call Renz_fnc_vehicleInit";
 				name="car0";
 			};
 			id=53;
@@ -707,7 +710,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this addAction [""Convert"", {(_this select 0) call Renz_fnc_vehicleInit}, [], 1, true, true];";
 				name="dummy";
 			};
 			id=62;

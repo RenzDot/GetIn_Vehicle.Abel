@@ -63,7 +63,7 @@ class CfgRenzVehicles
 
 		class O_Flames_MRAP_01_flames_01_F 
 		{
-			body = "O_Flames_LSV_01_unarmed_flames_01_F";
+			body = "O_Flames_MRAP_01_flames_01_F";
 			bodyTextures[] = {"a3\soft_f_bootcamp\offroad_01\data\offroad_01_ext_ig_05_co.paa","a3\soft_f_bootcamp\offroad_01\data\offroad_01_ext_ig_05_co.paa"};
 			seatFunction = "car";
 		}
