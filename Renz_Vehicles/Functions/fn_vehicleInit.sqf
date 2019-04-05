@@ -34,6 +34,8 @@ _gunnerSeatPosition = _vehConfig select 13;
 _pos = getPosATL _gunner;
 _body = createVehicle [_bodyType,  [0,0,0],[],0,"NONE"];
 _body setVectorDirAndUp [vectorDir _gunner, vectorUp _gunner];
+_body setVariable ["Renz_seatFunction", _seatFunction];
+
 {_body setObjectTextureGlobal [_forEachIndex, _x]} forEach _bodyTextures;
 if (_mass > 0) then {_body setMass _mass};
 _body lock true;
@@ -43,7 +45,8 @@ _gunner lock true;
 if (_seatFunction in ["car","tank"]) then {
 	if (count allTurrets _gunner > 0) then {
 		_gunner attachTo [_body,_attachPos];
-		_gunner setVariable ["gunnerSeatPosition", _gunnerSeatPosition];
+		_gunner setVariable ["Renz_seatFunction", _seatFunction, true];
+		_gunner setVariable ["Renz_gunnerSeatPosition", _gunnerSeatPosition, true];
 		{_gunner setHit [_x, 1, false]} forEach _hitParts;
 		{_gunner setObjectTextureGlobal [_forEachIndex, _x]} forEach _gunnerTextures;
 		{_gunner addWeapon _x} forEach _weapons;

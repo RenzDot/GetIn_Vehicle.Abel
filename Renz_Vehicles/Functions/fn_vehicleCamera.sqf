@@ -9,16 +9,19 @@
 	
 	player addEventHandler ["GetInMan", {
 		_eh = addMissionEventHandler ["EachFrame", {
-			if (vehicle player != player) then {
-				_turrets = allTurrets [vehicle player, true];
+			_veh = (objectParent player);
+			if (!isNull _veh) then {
+				_turrets = allTurrets [_veh, true];
 				_inTurret = false;
 				{
-					if (vehicle player turretUnit _x == player) then {
+					if (_veh turretUnit _x == player) then {
 						_inTurret = true;
 					}
 				} forEach _turrets;
 
-				if (!_inTurret) then {
+				_isPilot = (_veh getVariable ["Renz_seatFunction", ""] == "air") && (driver _veh == player);
+
+				if (!_inTurret && !_isPilot) then {
 					vehicle player switchCamera "External";
 				};	
 			};

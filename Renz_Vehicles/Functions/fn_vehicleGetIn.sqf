@@ -11,12 +11,14 @@ params ["_vehicle"];
 _allPositions = fullCrew [_body, "", true];//[[player, seatType, cargoIndex, gunnerIndex, isFFV], ...]
 
 //Replace cargo with gunner seat
-_gunnerSeatPosition = _gunner getVariable ["gunnerSeatPosition",0];
-{
-	if ((_x select 2) == _gunnerSeatPosition) exitWith {
-		_allPositions set [_forEachIndex, (fullCrew [_gunner, "gunner", true]) select 0];
-	};
-} forEach _allPositions;
+_gunnerSeatPosition = _gunner getVariable ["Renz_gunnerSeatPosition",-1];
+if (_gunnerSeatPosition != -1) then {
+	{
+		if ((_x select 2) == _gunnerSeatPosition) exitWith {
+			_allPositions set [_forEachIndex, (fullCrew [_gunner, "gunner", true]) select 0];
+		};
+	} forEach _allPositions;
+};
 
 //Find first empty space
 _newSeatIndex = -1;

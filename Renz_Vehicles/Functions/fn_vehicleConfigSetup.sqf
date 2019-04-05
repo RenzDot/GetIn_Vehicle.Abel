@@ -131,7 +131,7 @@ Renz_Vehicle_Configs = [
 		[],//_gunnerTextures 
 		"",//_gunnerAnimation 
 		[0.3,-0.5,0.6],//_attachPos
-		["autocannon_35mm","missiles_titan_AA"],//_weapons
+		["autocannon_35mm","missiles_titan"],//_weapons
 		["680Rnd_35mm_AA_shells_Tracer_Red","680Rnd_35mm_AA_shells_Tracer_Red","4Rnd_Titan_long_missiles","4Rnd_Titan_long_missiles"],//_magazines
 		-1,//_mass 
 		"tank",//_seatFunction 
@@ -433,7 +433,7 @@ Renz_Vehicle_Configs = [
 	[
 		"B_Clouds_Heli_Light_02_unarmed_cloudrider_01_AM",//_vehType
 		"B_Clouds_Heli_Light_02_unarmed_cloudrider_01_AM",//_bodyType
-		["a3\soft_f_epc\truck_03\data\truck_03_ext01_co.paa"],//_bodyTextures 
+		["argo\halloween2017_argo\heli_light_02\data\heli_light_02_ext_cloudrider_01_co.paa"],//_bodyTextures 
 		[],//_gunnerTextures 
 		"",//_gunnerAnimation 
 		[0,0,0],//_attachPos
