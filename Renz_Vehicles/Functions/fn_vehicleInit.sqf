@@ -34,7 +34,7 @@ _gunnerSeatPosition = _vehConfig select 13;
 _pos = getPosATL _gunner;
 _body = createVehicle [_bodyType,  [0,0,0],[],0,"NONE"];
 _body setVectorDirAndUp [vectorDir _gunner, vectorUp _gunner];
-_body setVariable ["Renz_seatFunction", _seatFunction];
+_body setVariable ["Renz_seatFunction", _seatFunction, true];
 
 {_body setObjectTextureGlobal [_forEachIndex, _x]} forEach _bodyTextures;
 if (_mass > 0) then {_body setMass _mass};
