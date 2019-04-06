@@ -11,7 +11,7 @@ _body = attachedTo _vehicle;
 if (isNull _body) then {
 	_body = _vehicle;
 	{	
-		if (isClass (missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _x)) exitWith {
+		if (typeOf _x in Renz_Vehicle_Types) exitWith {
 			_gunner = _x;
 		};
 	} forEach attachedObjects _body;

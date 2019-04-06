@@ -568,7 +568,6 @@ Renz_Vehicle_Configs = [
 
 ];
 
-//Renz_Vehicle_Configs = compileFinal (	(str Renz_Vehicle_Configs) select [1, count (str Renz_Vehicle_Configs) - 2]	);
 Renz_Vehicle_Types = [];
 {
 	Renz_Vehicle_Types pushBack (_x select 0)

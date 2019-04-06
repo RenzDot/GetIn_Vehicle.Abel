@@ -25,4 +25,4 @@ class Renz_Vehicles
 		fnc(vehicleGetNewSeat);
 		fnc(vehicleConfigSetup);
 	}
-}
+};
