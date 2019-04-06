@@ -12,7 +12,7 @@ respawnTemplates[] = { "Spectator", "Tickets", "EndMission", "MenuInventory" };
 corpseManagerMode = 1;
 corpseRemovalMaxTime = 300;
 
-allowFunctionsRecompile = 1;//Remove on finalisation
+allowFunctionsRecompile = 1; 
 
 class CfgFunctions {
 	#include "Renz_Vehicles\cfgFunctions.hpp"

@@ -35,7 +35,7 @@ compositeType values
 1 - Working driver + Working Gunner
 2 - Working driver + Working Seats
 */
-
+if (!isServer) exitWith {};
 if (!isNil "Renz_Vehicle_Configs") exitWith {};
 
 Renz_Vehicle_Configs = [
@@ -572,3 +572,4 @@ Renz_Vehicle_Types = [];
 {
 	Renz_Vehicle_Types pushBack (_x select 0)
 } forEach Renz_Vehicle_Configs;
+publicVariable "Renz_Vehicle_Types";

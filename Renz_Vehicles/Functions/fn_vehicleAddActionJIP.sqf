@@ -6,7 +6,7 @@
 
 if (isServer) exitWith {};
 [] spawn {
-	waitUntil {time > 0};
+	waitUntil {time > 0 && !isNil "Renz_Vehicle_Types"};
 	//_config = (missionConfigFile >> "CfgRenzVehicles" >> "Vehicles");
 
 	{

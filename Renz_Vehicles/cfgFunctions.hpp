@@ -1,11 +1,10 @@
 #define fnc(fname) class fname {headerType = -1;}
 
 
-class Renz_Vehicles
+class Renz_Vehicle_Functions
 {
 	tag = "Renz";
-
-	class Vehicles 
+	class Vehicle_Functions
 	{
 		file = "Renz_Vehicles\Functions";
 		fnc(vehicleInit);
@@ -25,4 +24,5 @@ class Renz_Vehicles
 		fnc(vehicleGetNewSeat);
 		fnc(vehicleConfigSetup);
 	}
-};
+}
+
