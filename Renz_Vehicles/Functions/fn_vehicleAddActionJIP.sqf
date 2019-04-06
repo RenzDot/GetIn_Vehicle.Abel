@@ -13,11 +13,22 @@ if (isServer) exitWith {};
 		//systemChat str [typeOf _x, isClass (missionConfigFile >> "CfgRenzVehicles" >> "Vehicles" >> typeOf _x)]
 		systemChat str [typeOf _x, typeOf _x in Renz_Vehicle_Types];
 		if (typeOf _x in Renz_Vehicle_Types) then {
-			(_x call Renz_fnc_vehicleGetGunnerBody) params ["_gunner","_body"];
-			systemChat str [_gunner, _body];
-			if (!isNull _gunner) then {
-				[_x] call Renz_fnc_vehicleAddactionGlobal;
+
+			//Air 
+			if (_x isKindof "air") then {
+				[_x] call Renz_fnc_vehicleAddActionGlobal;
 			};
+
+			//Unarmed 
+			if ((_x getVariable ["Renz_seatFunction",""]) == "car"  && count (attachedObjects _x) == 0 ) then {
+				[_x] call Renz_fnc_vehicleAddActionGlobal;
+			};
+
+			//Armed car or tank 
+			if ((_x getVariable ["Renz_seatFunction",""]) != "" && !isNull attachedTo _x) then {
+				[_x] call Renz_fnc_vehicleAddActionGlobal;
+			};
+			
 			
 		};
 	} forEach vehicles;

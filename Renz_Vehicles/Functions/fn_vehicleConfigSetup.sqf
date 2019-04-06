@@ -45,7 +45,7 @@ Renz_Vehicle_Configs = [
 		["","",""],//_bodyTextures 
 		[],//_gunnerTextures 
 		"",//_gunnerAnimation 
-		[0.34,0.1,0.2],//_attachPos
+		[0.34,0.1,0.26],//_attachPos
 		[],//_weapons
 		["140Rnd_30mm_MP_shells_Tracer_Green","60Rnd_30mm_APFSDS_shells_Tracer_Green"],//_magazines
 		-1,//_mass 
@@ -96,7 +96,7 @@ Renz_Vehicle_Configs = [
 		["",""],//_bodyTextures 
 		["a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa","a3\armor_f_beta\apc_tracked_02\data\apc_tracked_02_ext_01_aa_hexarid_co.paa"],//_gunnerTextures 
 		"",//_gunnerAnimation 
-		[0.34,-0.9,0.1],//_attachPos
+		[0.34,-0.9,0.07],//_attachPos
 		["autocannon_30mm","LMG_coax"],//_weapons
 		["140Rnd_30mm_MP_shells_Tracer_Yellow","140Rnd_30mm_MP_shells_Tracer_Yellow","60Rnd_30mm_APFSDS_shells_Tracer_Yellow","60Rnd_30mm_APFSDS_shells_Tracer_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow","200Rnd_762x51_Belt_Yellow"],//_magazines
 		-1,//_mass 
@@ -113,7 +113,7 @@ Renz_Vehicle_Configs = [
 		["","",""],//_bodyTextures 
 		[],//_gunnerTextures 
 		"",//_gunnerAnimation 
-		[0.34,0.2,0.4],//_attachPos
+		[0.34,0.2,0.45],//_attachPos
 		[],//_weapons
 		["680Rnd_35mm_AA_shells_Tracer_Green"],//_magazines
 		-1,//_mass 
