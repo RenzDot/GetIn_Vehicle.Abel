@@ -6,10 +6,11 @@
 
 params [["_gunner",objNull]];
  
-if !(local _gunner) exitWith {};
 if (isNil "Renz_Vehicle_Configs") then {
 	call Renz_fnc_vehicleConfigSetup;
 };
+
+if (!isServer OR isNull _gunner) exitWith {};
 
 _vehIndex = (Renz_Vehicle_Types find (typeOf _gunner));
 if (_vehIndex == -1) exitWith {systemChat (typeOf _gunner + " does not exist")};
@@ -47,8 +48,8 @@ if (_seatFunction in ["car","tank"]) then {
 		_gunner attachTo [_body,_attachPos];
 		{_gunner setHit [_x, 1, false]} forEach _hitParts;
 		{_gunner setObjectTextureGlobal [_forEachIndex, _x]} forEach _gunnerTextures;
-		{_gunner addWeapon _x} forEach _weapons;
 		{_gunner addMagazine _x} forEach _magazines; 
+		{_gunner addWeapon _x} forEach _weapons;
 
 		_gunner setVariable ["Renz_seatFunction", _seatFunction, true];
 		if (_gunnerAnimation != "") then {_gunner setVariable ["Renz_gunnerAnimation", _gunnerAnimation, true] };

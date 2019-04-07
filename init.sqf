@@ -39,7 +39,7 @@ boat = ["O_Boat_Armed_01_hmg_F"];
 
 v = air + tank + car + static + boat;
 
-[] execVM "Renz_Vehicles\clientInit.sqf";
+[] execVM "Renz_Vehicles\init.sqf";
 
 _pos = getPos player; 
 /*if (!isMultiplayer) then {

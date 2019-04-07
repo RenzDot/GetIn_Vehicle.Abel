@@ -45,7 +45,7 @@ Renz_Vehicle_Configs = [
 		["","",""],//_bodyTextures 
 		[],//_gunnerTextures 
 		"",//_gunnerAnimation 
-		[0.34,0.1,0.25],//_attachPos
+		[0.34,0.1,0.24],//_attachPos
 		[],//_weapons
 		["140Rnd_30mm_MP_shells_Tracer_Green","60Rnd_30mm_APFSDS_shells_Tracer_Green"],//_magazines
 		-1,//_mass 

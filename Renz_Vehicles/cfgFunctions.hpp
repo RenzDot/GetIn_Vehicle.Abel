@@ -23,6 +23,7 @@ class Renz_Vehicle_Functions
 		fnc(vehicleGetIn);
 		fnc(vehicleGetNewSeat);
 		fnc(vehicleConfigSetup);
+		fnc(vehicleCreate);
 	}
 }
 
