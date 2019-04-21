@@ -13,7 +13,6 @@ params [
 	["_special","NONE",[""]]
 ];
 
-
 if (isServer) then {
 	"renz_vehicleCreateEvent" addPublicVariableEventHandler {
 		_parameters = (_this select 1);
@@ -26,5 +25,6 @@ if (isServer) then {
 	};
 };
 
+if (_type == "") exitWith {};
 renz_vehicleCreateEvent = [_type,_position,_markers,_placement,_special];
 publicVariableServer "renz_vehicleCreateEvent";

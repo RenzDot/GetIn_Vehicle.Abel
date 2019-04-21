@@ -1,9 +1,10 @@
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-// Sets up vehicles init
+// Sets up Argo vehicles for server
 // Called on all clients 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-if (isServer) then {
-	[] execVM "Renz_Vehicles\serverInit.sqf";
-};
+if (!isServer) exitWith {};
 
-[] execVM "Renz_Vehicles\clientInit.sqf";
+[] call Renz_fnc_vehicleInit;
+[] call Renz_fnc_vehicleCreate;
+[] call Renz_fnc_vehicleConvertServer;
+

@@ -16,7 +16,8 @@ allowFunctionsRecompile = 1;
 
 class CfgFunctions {
 	#include "Renz_Vehicles\cfgFunctions.hpp"
-};
+	#include "Pull\Functions\CfgFunctions.hpp"	
+}
 
 #include "CfgDC.hpp"
 #include "KKSB\KKSB.ext"

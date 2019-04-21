@@ -6,7 +6,7 @@
 
 params [["_vehicle",objNull]];
 _gunner = objNull;
-_body = attachedTo _vehicle;
+_body = _vehicle getVariable ["Renz_vehicleBody", attachedTo _vehicle];
 
 if (isNull _body) then {
 	_body = _vehicle;

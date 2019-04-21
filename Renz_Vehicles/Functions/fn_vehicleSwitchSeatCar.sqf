@@ -22,7 +22,7 @@ if (_newSeatType in ["gunner","driver"]) then {
 		if (_hasEmptyCommander) then {
 			_bouncer = createAgent [typeOf player , [0,0,0],[],0,"NONE"];
 			_bouncer moveInAny _gunner;
-			systemChat "Bouncer bounced";
+			//systemchat "Bouncer bounced";
 		};
 	};
 

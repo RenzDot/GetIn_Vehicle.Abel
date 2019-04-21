@@ -47,10 +47,10 @@ if (_seatType == "gunner") then {
 		if (_hasEmptyCommander) then {
 			_bouncer = createAgent [typeOf player,[0,0,0],[],0,"NONE"];
 			_bouncer moveInAny _gunner;
-			systemChat "Bouncer bounced";
+			//systemchat "Bouncer bounced";
 		};
 	};
-	systemChat ("Started at : " + str time);
+	//systemchat ("Started at : " + str time);
 
 	//Switch period
 	[_gunner,_bouncer] spawn {
@@ -77,3 +77,5 @@ if (_seatType == "gunner") then {
 	};
 
 };
+
+call Renz_fnc_vehicleCheckBindings;

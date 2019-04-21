@@ -39,49 +39,11 @@ boat = ["O_Boat_Armed_01_hmg_F"];
 
 v = air + tank + car + static + boat;
 
-[] execVM "Renz_Vehicles\init.sqf";
+call Renz_fnc_vehicleServerInit;
+call Renz_fnc_vehicleClientInit;
 
 _pos = getPos player; 
-/*if (!isMultiplayer) then {
-	{
-		createVehicle [_x, getMarkerPos "marker_0",[],0,"NONE"];
-		sleep 0.1;
-	} forEach v;
-};*/
-	
 
-forceFire = (findDisplay 46) displayAddEventHandler ["KeyDown", {
-	_key = (_this select 1);
-	if (_key == 57 && vehicle player == heli) then {
-		static fire ((weapons static) select 0);
-	}
-
-}];
-
-
-
-
-/*
-Sub-Systems:
-- Possess 
-	- Attach-To
-	- setVariables
-	- Death
-	- 3rd person
-- turret
-	- Logic unit
-	- turret doLook
-	- turret doFire
-- VehicleAccess
-	- addAction
-- VehicleUI
-	- Seat no.
-	- Ammo
-	
-
-*/
-
-/*
-
-
-*/
+sleep 3;
+dummy call Renz_fnc_vehicleConvertClient;
+systemChat "Converted a vehicle";

@@ -4,11 +4,6 @@
 // To use: 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
-/*
-To do:
-- Ensure addAction run for all clients
-*/
-
 params [["_vehicle",objNull],["_isFirstCaller", false]];
 
 //First time setup
@@ -22,7 +17,7 @@ if (isNull _vehicle) exitWith {
 			renz_addVehActionEvent = [_netId, false];
 			publicVariable "renz_addVehActionEvent";
 		};
-		systemChat ("addActioned + " + str _vehicle);
+		//systemchat ("addActioned + " + str _vehicle);
 	};
 };
 

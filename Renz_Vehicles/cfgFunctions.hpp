@@ -24,6 +24,13 @@ class Renz_Vehicle_Functions
 		fnc(vehicleGetNewSeat);
 		fnc(vehicleConfigSetup);
 		fnc(vehicleCreate);
+		fnc(vehicleConvertClient);
+		fnc(vehicleConvertServer);
+		fnc(vehicleClientInit);
+		fnc(vehicleCheckBindings);
+		fnc(vehicleCounterMeasure);
+		fnc(vehicleServerInit);
+		
 	}
 }
 
