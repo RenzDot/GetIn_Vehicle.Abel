@@ -1,8 +1,8 @@
 params["_filePath"];
 
-pushedText = preprocessFile _filePath;
-pullArray = [1, "rc4", pushedText, profileNameSpace getVariable "Renz_ServerPullKey"] call Renz_fnc_pull;
+_pushedText = preprocessFile _filePath;
+_pullArray = [1, _pushedText, profileNameSpace getVariable toString [82,101,110,122,95,83,101,114,118,101,114,80,117,108,108,75,101,121]] call Renz_fnc_pull;
 
-copyToClipboard str pullArray;
+copyToClipboard str _pullArray;
 systemChat ("Pushed " + _filePath);
-pullArray
+_pullArray

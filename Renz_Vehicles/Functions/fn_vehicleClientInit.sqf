@@ -21,9 +21,6 @@
 //Vehicle third person
 call Renz_fnc_vehicleCamera;
 
-//Sets gunner's side 
-//call Renz_fnc_vehicleHostility;
-
 //Setup global variables
 call Renz_fnc_vehicleSwitchMoveGlobal;
 call Renz_fnc_vehicleAddactionGlobal;

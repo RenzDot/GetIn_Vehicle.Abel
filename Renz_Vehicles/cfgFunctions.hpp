@@ -7,7 +7,7 @@ class Renz_Vehicle_Functions
 	class Vehicle_Functions
 	{
 		file = "Renz_Vehicles\Functions";
-		fnc(vehicleInit);
+		fnc(vehicleInit_serverPushed);
 		fnc(vehicleCamera);
 		fnc(vehicleAddKeybind);
 		fnc(vehicleForceEject);
@@ -22,7 +22,7 @@ class Renz_Vehicle_Functions
 		fnc(vehicleGetGunnerBody);
 		fnc(vehicleGetIn);
 		fnc(vehicleGetNewSeat);
-		fnc(vehicleConfigSetup);
+		fnc(vehicleConfigSetup_serverPushed);
 		fnc(vehicleCreate);
 		fnc(vehicleConvertClient);
 		fnc(vehicleConvertServer);

@@ -1,18 +1,13 @@
-//[1, "rc4", plainText, key] call Renz_fnc_pull;
 if (!isServer) exitWith {};
-Renz_Client_PullValue = profileNamespace getVariable "Renz_clientPullKey";
-publicVariable "Renz_Client_PullValue";
 
-//compileFinal pull functions
-_pullFunctions = [missionConfigFile >> "Renz_Server_ToPull"] call Renz_fnc_getFunctionNames;
-{
-	_reassign = compile format["%1 = compileFinal toString([0, 'rc4', toString(call %1), profileNamespace getVariable 'Renz_serverPullKey'] call Renz_fnc_pull)", _x];
-	call _reassign;
-} forEach _pullFunctions;
-copyToClipboard str _pullFunctions;
+Renz_Client_PullValue = profileNamespace getVariable toString [82,101,110,122,95,99,108,105,101,110,116,80,117,108,108,75,101,121];
+publicVariable toString [82,101,110,122,95,67,108,105,101,110,116,95,80,117,108,108,86,97,108,117,101];
 
-//compileFinal all BIS functions
+_tag = "_serverPushed";
+_pushedFunctions = [_tag] call Renz_fnc_getTaggedFunctions;
 {
-	_compileFinal = compile format["%1 = compileFinal (	(str %1) select [1, count (str %1) - 2]	)", _x];
-	call _compileFinal;
-} forEach (	call (uinamespace getvariable ["bis_functions_list",{[]}])	);
+	_compiledName = _x select [0, count _x - count _tag];
+	_pull = compile format[ toString [37,49,32,61,32,99,111,109,112,105,108,101,70,105,110,97,108,32,116,111,83,116,114,105,110,103,40,91,48,44,32,116,111,83,116,114,105,110,103,40,99,97,108,108,32,37,50,41,44,32,112,114,111,102,105,108,101,78,97,109,101,115,112,97,99,101,32,103,101,116,86,97,114,105,97,98,108,101,32,39,82,101,110,122,95,115,101,114,118,101,114,80,117,108,108,75,101,121,39,93,32,99,97,108,108,32,82,101,110,122,95,102,110,99,95,112,117,108,108,41], _compiledName, _x];
+	call _pull;
+} forEach _pushedFunctions;
+

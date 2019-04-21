@@ -20,7 +20,7 @@ class Renz_Pull_Functions
 			headerType = -1;
 		}
 
-		class getFunctionNames 
+		class getTaggedFunctions
 		{
 			headerType = -1;
 		}
